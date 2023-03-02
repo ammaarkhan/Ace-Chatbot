@@ -3,7 +3,8 @@ import json
 import pickle as pkl
 import numpy as np
 import nltk
-# nltk.download('punkt')
+# nltk.download('punkt') # run this line first time if error shows
+# nltk.download('wordnet') # run this line first time if error shows
 
 from tensorflow import keras
 from keras.models import Sequential
@@ -32,7 +33,18 @@ for intent in intents['intents']:
         
         # linking patterns with respective tags and adding to documents list as a tuple
         documents.append(((word_list), intent['tag']))
-        # print(type(documents[0])) # for testing
+        # print(documents) # for testing
+        
         # adding tag to class list
         if intent['tag'] not in classes:
             classes.append(intent['tag'])
+
+
+words = [lemmatizer.lemmatize(word) # lemmatizes the word - gives root word
+    for word in words if word not in ignore_letters] 
+words = sorted(set(words)) # removes the duplicates
+
+# save the words and classes lists as binary files
+pkl.dump(words, open('words.pkl', 'wb'))
+pkl.dump(classes, open('classes.pkl', 'wb'))
+
