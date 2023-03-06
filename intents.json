@@ -1,12 +1,108 @@
 {
 "intents": [
-    {"tag": "greeting",
-    "patterns": ["hello", "hi", "what's up?", "good evening", "how are you?"],
-    "responses": ["Hello!", "Hi", "Greeting's human", "How can I help you today?"]},
-    {"tag": "name",
-    "patterns": ["what is your name?", "tell me your name?", "what should i call you?", "can i have your name", "what is the chatbots name"],
-    "responses":["I'm a ChatBot. My name is Converso", "Call me Converso", "My name is Converso."]},
-    {"tag": "age",
-    "patterns": ["what's your age?", "how old are you?", "age", "when were you made", "since when are you alive"],
-    "responses": ["I'm less than a year old", "My creator is 19 year's old, I am 1 < old."]}
-]}
+    {
+        "tag": "greeting",
+        "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "What's up",
+        "Hi there",
+        "Greetings"
+        ],
+        "responses": [
+        "Hello! How can I help you today?",
+        "Hi! What can I do for you?",
+        "Hey there! How can I assist you?",
+        "Greetings! What brings you here?"
+        ]
+    },
+    {
+        "tag": "goodbye",
+        "patterns": [
+        "Goodbye",
+        "Bye",
+        "See you later",
+        "Talk to you later"
+        ],
+        "responses": [
+        "Goodbye! Have a great day!",
+        "Bye! See you soon!",
+        "Take care and talk to you later!",
+        "See you later!"
+        ]
+    },
+    {
+        "tag": "thanks",
+        "patterns": [
+        "Thank you",
+        "Thanks",
+        "Thanks a lot",
+        "Thank you so much",
+        "I appreciate it"
+        ],
+        "responses": [
+        "You're welcome!",
+        "No problem!",
+        "Glad to help!",
+        "My pleasure!"
+        ]
+    },
+    {
+        "tag": "name",
+        "patterns": [
+        "What's your name?",
+        "May I know your name?",
+        "Do you have a name?",
+        "What do people call you?"
+        ],
+        "responses": [
+        "My name is Chatbot!",
+        "You can call me Chatbot!",
+        "I go by the name Chatbot!"
+        ]
+    },
+    {
+        "tag": "age",
+        "patterns": [
+        "How old are you?",
+        "What's your age?",
+        "When were you born?",
+        "Are you young or old?"
+        ],
+        "responses": [
+        "I was created in 2021, so I'm still very young!",
+        "I don't have an age as I am a virtual assistant, but I was developed in 2021.",
+        "As a chatbot, I don't age, but I was launched in 2021."
+        ]
+    },
+    {
+        "tag": "weather",
+        "patterns": [
+        "What's the weather like today?",
+        "Will it rain today?",
+        "What's the temperature right now?",
+        "Do I need an umbrella today?"
+        ],
+        "responses": [
+        "You can check the weather on a weather app or website.",
+        "I'm sorry, I don't have access to real-time weather information.",
+        "I'm a chatbot and don't have the ability to check the weather, sorry."
+        ]
+    },
+    {
+        "tag": "help",
+        "patterns": [
+        "Can you help me?",
+        "I need assistance",
+        "Can you assist me?",
+        "What can you do for me?"
+        ],
+        "responses": [
+        "Of course! What do you need help with?",
+        "Sure, I'll do my best to assist you. What do you need help with?",
+        "Yes, I'm here to help. What can I do for you?",
+        "Certainly! What do you need assistance with?"
+        ]
+    }]
+}

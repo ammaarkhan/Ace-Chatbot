@@ -38,7 +38,7 @@ def predict_class(sent):
     bow = bagofw(sent) # array of 0s and 1s, 1 representing the word is present
     res = model.predict(np.array([bow]))[0] # predict and get the result, of type numpy.ndarray
     # resss = model.predict(np.array([bow])) # ex: [[0.9838628 0.00768638 0.0084508 ]] (for input 'Hi')
-    ERROR_THRESHOLD = 0.75
+    ERROR_THRESHOLD = 0.25
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD] # this removes the values that are below the 0.25, ex: discards [0.00768638, 0.0084508]
     results.sort(key=lambda x: x[1], reverse=True) # sort from largest to smallest according to probability
     print(results) # [[0, 0.9851791]] 
