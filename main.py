@@ -49,9 +49,13 @@ def predict_class(sent):
     return intents_list
     
 def get_response(intents_list, intents_json):
+    result = ""
+    if bool(intents_list) == False:
+        result = random.choice(["Sorry, can't understand you", "Please give me more info",
+                "Not sure I understand"]) 
+        return result
     tag = intents_list[0]['intent'] # gets the 'intent' value from the dictionary
     list_of_intents = intents_json['intents'] # retrieving json file
-    result = ""
     for i in list_of_intents: 
         if i['tag'] == tag: # retrieving responses for that tag
             result = random.choice(i['responses'])
