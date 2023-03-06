@@ -3,11 +3,9 @@
     {
         "tag": "greeting",
         "patterns": [
-        "Hi",
+        "Good Evening",
         "Hello",
-        "Hey",
-        "What's up",
-        "Hi there",
+        "Hi",
         "Greetings"
         ],
         "responses": [

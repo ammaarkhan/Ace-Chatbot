@@ -3,6 +3,7 @@ import json
 import pickle as pkl
 import numpy as np
 import nltk
+import csv
 
 from tensorflow import keras
 from keras.models import load_model
@@ -42,19 +43,19 @@ def predict_class(sent):
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD] # this removes the values that are below the 0.25, ex: discards [0.00768638, 0.0084508]
     results.sort(key=lambda x: x[1], reverse=True) # sort from largest to smallest according to probability
     print(results) # [[0, 0.9851791]] 
-    intents_list = []
+    results_list = []
     for r in results: # r is [0, 0.9851791]
-        intents_list.append({'intent': classes[r[0]], # classes[0]
+        results_list.append({'intent': classes[r[0]], # classes[0]
                             'probability': str(r[1])}) # str(0.9851791)
-    return intents_list
+    return results_list
     
-def get_response(intents_list, intents_json):
+def get_response(results_list, intents_json):
     result = ""
-    if bool(intents_list) == False:
+    if bool(results_list) == False:
         result = random.choice(["Sorry, can't understand you", "Please give me more info",
                 "Not sure I understand"]) 
         return result
-    tag = intents_list[0]['intent'] # gets the 'intent' value from the dictionary
+    tag = results_list[0]['intent'] # gets the 'intent' value from the dictionary
     list_of_intents = intents_json['intents'] # retrieving json file
     for i in list_of_intents: 
         if i['tag'] == tag: # retrieving responses for that tag
@@ -65,10 +66,18 @@ def get_response(intents_list, intents_json):
 print("Chatbot running")
 
 while True:
+    list_of_intents = intents['intents'] # retrieving json file
+    with open('results.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Pattern", "CalcIntent", "RawCalc"])
+        for i in list_of_intents:
+            for x in i['patterns']:
+                # print(x) 
+                res = predict_class(x)
+                writer.writerow([x, res[0]['intent'], res])
     message = input("")
     if message == "end":
         break
-    intents_list = predict_class(message) # [{'intent': 'greeting', 'probability': '0.9163127'}]
-    final_res = get_response(intents_list, intents) # randomly chosen response with same tag as prediction
+    results_list = predict_class(message) # [{'intent': 'greeting', 'probability': '0.9163127'}]
+    final_res = get_response(results_list, intents) # randomly chosen response with same tag as prediction
     print(final_res)
-    
