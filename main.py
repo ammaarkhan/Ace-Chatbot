@@ -66,15 +66,22 @@ def get_response(results_list, intents_json):
 print("Chatbot running")
 
 while True:
+    bar = 0
+    baz = 0
     list_of_intents = intents['intents'] # retrieving json file
     with open('results.csv', 'w', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(["Pattern", "CalcIntent", "RawCalc"])
+        writer.writerow(["Pattern", "AccIntent", "CalcIntent", "RawCalc"])
         for i in list_of_intents:
             for x in i['patterns']:
+                bar += 1
                 # print(x) 
                 res = predict_class(x)
-                writer.writerow([x, res[0]['intent'], res])
+                writer.writerow([x, i['tag'], res[0]['intent'], res])
+                if i['tag'] == res[0]['intent']:
+                    baz += 1
+        writer.writerow([ "", "Accuracy", (baz/bar)*100])
+                
     message = input("")
     if message == "end":
         break
