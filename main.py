@@ -9,6 +9,8 @@ from tensorflow import keras
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 
+model_list = ['chatbotmodelv1.h5', 'chatbotmodelv2.h5']
+
 # creating a WordNetLemmatizer() class to get the root words
 lemmatizer = WordNetLemmatizer()
 
@@ -16,7 +18,7 @@ lemmatizer = WordNetLemmatizer()
 intents = json.loads(open("intents.json").read())
 words = pkl.load(open('words.pkl', 'rb'))
 classes = pkl.load(open('classes.pkl', 'rb'))
-model = load_model('chatbotmodelv1.h5')
+# model = load_model('chatbotmodelv1.h5')
 
 def clean_up_sentences(sent):
     sentence_words = nltk.word_tokenize(sent) # returns an array of words for the sentence 
@@ -35,7 +37,8 @@ def bagofw(sent):
     return np.array(bag)
 
 
-def predict_class(sent):
+def predict_class(sent, modelName):
+    model = load_model(modelName)
     bow = bagofw(sent) # array of 0s and 1s, 1 representing the word is present
     res = model.predict(np.array([bow]))[0] # predict and get the result, of type numpy.ndarray
     # resss = model.predict(np.array([bow])) # ex: [[0.9838628 0.00768638 0.0084508 ]] (for input 'Hi')
@@ -72,15 +75,19 @@ while True:
     with open('results.csv', 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["Pattern", "AccIntent", "CalcIntent", "RawCalc"])
-        for i in list_of_intents:
-            for x in i['patterns']:
-                bar += 1
-                # print(x) 
-                res = predict_class(x)
-                writer.writerow([x, i['tag'], res[0]['intent'], res])
-                if i['tag'] == res[0]['intent']:
-                    baz += 1
-        writer.writerow([ "", "Accuracy", (baz/bar)*100])
+        for modelName in model_list:
+            writer.writerow(["", "model name:", modelName])
+            for i in list_of_intents:
+                for x in i['patterns']:
+                    bar += 1
+                    # print(x) 
+                    res = predict_class(x, modelName)
+                    writer.writerow([x, i['tag'], res[0]['intent'], res])
+                    if i['tag'] == res[0]['intent']:
+                        baz += 1
+            writer.writerow([ "", "Accuracy", (baz/bar)*100])
+            bar = 0
+            baz = 0
                 
     message = input("")
     if message == "end":
