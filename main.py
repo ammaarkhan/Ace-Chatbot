@@ -9,7 +9,7 @@ from tensorflow import keras
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 
-model_list = ['chatbotmodelv1.h5', 'chatbotmodelv2.h5']
+model_list = ['chatbotmodelv3.h5'] # 'chatbotmodelv1.h5', 'chatbotmodelv2.h5',
 
 # creating a WordNetLemmatizer() class to get the root words
 lemmatizer = WordNetLemmatizer()
@@ -92,6 +92,6 @@ while True:
     message = input("")
     if message == "end":
         break
-    results_list = predict_class(message) # [{'intent': 'greeting', 'probability': '0.9163127'}]
+    results_list = predict_class(message, 'chatbotmodelv3.h5') # [{'intent': 'greeting', 'probability': '0.9163127'}]
     final_res = get_response(results_list, intents) # randomly chosen response with same tag as prediction
     print(final_res)

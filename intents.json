@@ -102,5 +102,67 @@
         "Yes, I'm here to help. What can I do for you?",
         "Certainly! What do you need assistance with?"
         ]
-    }]
+    },
+    {
+        "tag": "joke",
+        "patterns": [
+          "Tell me a joke",
+          "Can you make me laugh?",
+          "What's a good joke?",
+          "I need a pick-me-up",
+          "Tell me something funny"
+        ],
+        "responses": [
+          "Why don't scientists trust atoms? Because they make up everything!",
+          "Why don't seagulls fly by the bay? Because then they'd be bagels!",
+          "Why did the tomato turn red? Because it saw the salad dressing!",
+          "What do you call an alligator in a vest? An investigator!"
+        ]
+      },
+      {
+        "tag": "pun",
+        "patterns": [
+          "Tell me a pun",
+          "Do you know any puns?",
+          "What's a good pun?",
+          "Puns please"
+        ],
+        "responses": [
+          "I'm reading a book on the history of glue. I just can't seem to put it down!",
+          "I was wondering why the ball was getting bigger. Then it hit me!",
+          "Why did the bicycle fall over? Because it was two-tired!",
+          "I told my wife she was drawing her eyebrows too high. She looked surprised!"
+        ]
+      },
+      {
+        "tag": "fun_fact",
+        "patterns": [
+          "Tell me a fun fact",
+          "Did you know?",
+          "What's something interesting?",
+          "Tell me something I don't know",
+          "Fascinate me"
+        ],
+        "responses": [
+          "A group of flamingos is called a flamboyance.",
+          "A strawberry isn't a berry, but a banana is.",
+          "In Switzerland, it is illegal to own just one guinea pig.",
+          "The shortest war in history was between Britain and Zanzibar in 1896. Zanzibar surrendered after just 38 minutes."
+        ]
+      },
+      {
+        "tag": "compliment",
+        "patterns": [
+          "You're amazing!",
+          "You're the best chatbot ever",
+          "You're so smart",
+          "You're awesome"
+        ],
+        "responses": [
+          "Thank you so much! You're pretty great yourself.",
+          "You're too kind. I'm just doing my best to be helpful.",
+          "Wow, thank you! It's always nice to hear a compliment.",
+          "You're making me blush! I'm glad you're enjoying our conversation."
+        ]
+      }]
 }
