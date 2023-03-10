@@ -6,7 +6,9 @@
         "Good Evening",
         "Hello",
         "Hi",
-        "Greetings"
+        "Greetings",
+        "Good Morning",
+        "Good Afternoon"
         ],
         "responses": [
         "Hello! How can I help you today?",

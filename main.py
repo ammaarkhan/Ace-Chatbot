@@ -68,27 +68,27 @@ def get_response(results_list, intents_json):
 
 print("Chatbot running")
 
+bar = 0
+baz = 0
+list_of_intents = intents['intents'] # retrieving json file
+with open('results.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(["Pattern", "AccIntent", "CalcIntent", "RawCalc"])
+    for modelName in model_list:
+        writer.writerow(["", "model name:", modelName])
+        for i in list_of_intents:
+            for x in i['patterns']:
+                bar += 1
+                # print(x) 
+                res = predict_class(x, modelName)
+                writer.writerow([x, i['tag'], res[0]['intent'], res])
+                if i['tag'] == res[0]['intent']:
+                    baz += 1
+        writer.writerow([ "", "Accuracy", (baz/bar)*100])
+        bar = 0
+        baz = 0
+
 while True:
-    bar = 0
-    baz = 0
-    list_of_intents = intents['intents'] # retrieving json file
-    with open('results.csv', 'w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(["Pattern", "AccIntent", "CalcIntent", "RawCalc"])
-        for modelName in model_list:
-            writer.writerow(["", "model name:", modelName])
-            for i in list_of_intents:
-                for x in i['patterns']:
-                    bar += 1
-                    # print(x) 
-                    res = predict_class(x, modelName)
-                    writer.writerow([x, i['tag'], res[0]['intent'], res])
-                    if i['tag'] == res[0]['intent']:
-                        baz += 1
-            writer.writerow([ "", "Accuracy", (baz/bar)*100])
-            bar = 0
-            baz = 0
-                
     message = input("")
     if message == "end":
         break
