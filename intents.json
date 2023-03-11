@@ -4,9 +4,8 @@
         "tag": "greeting",
         "patterns": [
         "Good Evening",
-        "Hello",
-        "Hi",
-        "Greetings",
+        "Hello there",
+        "Hi there",
         "Good Morning",
         "Good Afternoon"
         ],
@@ -54,7 +53,8 @@
         "What's your name?",
         "May I know your name?",
         "Do you have a name?",
-        "What do people call you?"
+        "What do people call you?",
+        "Name"
         ],
         "responses": [
         "My name is Chatbot!",
@@ -68,7 +68,8 @@
         "How old are you?",
         "What's your age?",
         "When were you born?",
-        "Are you young or old?"
+        "Are you young or old?",
+        "Age"
         ],
         "responses": [
         "I was created in 2021, so I'm still very young!",
@@ -82,7 +83,8 @@
         "What's the weather like today?",
         "Will it rain today?",
         "What's the temperature right now?",
-        "Do I need an umbrella today?"
+        "Do I need an umbrella today?",
+        "Weather"
         ],
         "responses": [
         "You can check the weather on a weather app or website.",
@@ -96,7 +98,8 @@
         "Can you help me?",
         "I need assistance",
         "Can you assist me?",
-        "What can you do for me?"
+        "What can you do for me?",
+        "Help"
         ],
         "responses": [
         "Of course! What do you need help with?",
@@ -112,7 +115,8 @@
           "Can you make me laugh?",
           "What's a good joke?",
           "I need a pick-me-up",
-          "Tell me something funny"
+          "Tell me something funny",
+          "Joke"
         ],
         "responses": [
           "Why don't scientists trust atoms? Because they make up everything!",
@@ -127,7 +131,8 @@
           "Tell me a pun",
           "Do you know any puns?",
           "What's a good pun?",
-          "Puns please"
+          "Puns please",
+          "Pun"
         ],
         "responses": [
           "I'm reading a book on the history of glue. I just can't seem to put it down!",
@@ -143,7 +148,8 @@
           "Did you know?",
           "What's something interesting?",
           "Tell me something I don't know",
-          "Fascinate me"
+          "Fascinate me",
+          "Fun fact"
         ],
         "responses": [
           "A group of flamingos is called a flamboyance.",
@@ -165,6 +171,18 @@
           "You're too kind. I'm just doing my best to be helpful.",
           "Wow, thank you! It's always nice to hear a compliment.",
           "You're making me blush! I'm glad you're enjoying our conversation."
+        ]
+      }, 
+      {
+        "tag": "registration-time",
+        "patterns": [
+          "where do i find my registration date and time?",
+          "Registration date and time?",
+          "how do i know when my registration time is?",
+          "when is my registration date and time?"
+        ],
+        "responses": [
+          "Personalized registration dates are available to view on the Student Service Centre (SSC), typically around a month prior to your registration opening. Sign in to the SSC, hover over the Registration tab, then select ‘Registration’ to determine your registration date. For a rough idea of when you will be registering for courses you can check registration dates."
         ]
       }]
 }
