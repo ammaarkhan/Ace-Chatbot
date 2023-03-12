@@ -78,21 +78,6 @@
         ]
     },
     {
-        "tag": "weather",
-        "patterns": [
-        "What's the weather like today?",
-        "Will it rain today?",
-        "What's the temperature right now?",
-        "Do I need an umbrella today?",
-        "Weather"
-        ],
-        "responses": [
-        "You can check the weather on a weather app or website.",
-        "I'm sorry, I don't have access to real-time weather information.",
-        "I'm a chatbot and don't have the ability to check the weather, sorry."
-        ]
-    },
-    {
         "tag": "help",
         "patterns": [
         "Can you help me?",
@@ -108,56 +93,6 @@
         "Certainly! What do you need assistance with?"
         ]
     },
-    {
-        "tag": "joke",
-        "patterns": [
-          "Tell me a joke",
-          "Can you make me laugh?",
-          "What's a good joke?",
-          "I need a pick-me-up",
-          "Tell me something funny",
-          "Joke"
-        ],
-        "responses": [
-          "Why don't scientists trust atoms? Because they make up everything!",
-          "Why don't seagulls fly by the bay? Because then they'd be bagels!",
-          "Why did the tomato turn red? Because it saw the salad dressing!",
-          "What do you call an alligator in a vest? An investigator!"
-        ]
-      },
-      {
-        "tag": "pun",
-        "patterns": [
-          "Tell me a pun",
-          "Do you know any puns?",
-          "What's a good pun?",
-          "Puns please",
-          "Pun"
-        ],
-        "responses": [
-          "I'm reading a book on the history of glue. I just can't seem to put it down!",
-          "I was wondering why the ball was getting bigger. Then it hit me!",
-          "Why did the bicycle fall over? Because it was two-tired!",
-          "I told my wife she was drawing her eyebrows too high. She looked surprised!"
-        ]
-      },
-      {
-        "tag": "fun_fact",
-        "patterns": [
-          "Tell me a fun fact",
-          "Did you know?",
-          "What's something interesting?",
-          "Tell me something I don't know",
-          "Fascinate me",
-          "Fun fact"
-        ],
-        "responses": [
-          "A group of flamingos is called a flamboyance.",
-          "A strawberry isn't a berry, but a banana is.",
-          "In Switzerland, it is illegal to own just one guinea pig.",
-          "The shortest war in history was between Britain and Zanzibar in 1896. Zanzibar surrendered after just 38 minutes."
-        ]
-      },
       {
         "tag": "compliment",
         "patterns": [
@@ -183,6 +118,90 @@
         ],
         "responses": [
           "Personalized registration dates are available to view on the Student Service Centre (SSC), typically around a month prior to your registration opening. Sign in to the SSC, hover over the Registration tab, then select ‘Registration’ to determine your registration date. For a rough idea of when you will be registering for courses you can check registration dates."
+        ]
+      }, 
+      {
+        "tag": "blocked-course",
+        "patterns": [
+          "what is a 'blocked' course?",
+          "why is it showing blocked course?",
+          "blocked course?",
+          "what does it mean by blocked course?"
+        ],
+        "responses": [
+          "The faculty has chosen to block the course from registration once it is filled and will now manage the wait-list accordingly. If the course is blocked with a wait-list, sign up for the wait-list. If the course is blocked with no wait-list available, read the Section Comments to find out more specific information. If no information is available under the Section Comments, you are welcome to contact the specific unit offering the course to find out more registration details."
+        ]
+      }, 
+      {
+        "tag": "restricted-course",
+        "patterns": [
+          "what is a 'restricted' course?",
+          "why is it showing restricted course?",
+          "restricted course?",
+          "what does it mean by restricted course?"
+        ],
+        "responses": [
+          "Some faculties choose to restrict who can register in their course(s). A course can be restricted by year level (year >= 3), degree program (BMGT-O), specialization/major (MAJ PSYO), or a combination of these options (year >=2, MAJ PSYO). How the course is restricted will be listed below the seat summary in the course schedule. If you meet the restrictions you will be able to register in the course."
+        ]
+      }, 
+      {
+        "tag": "two-course-overlap",
+        "patterns": [
+          "CAN I REGISTER IN TWO COURSES THAT OVERLAP IN MY SCHEDULE?",
+          "two courses are overlapping in my schedule",
+          "two courses overlapping",
+          "what to do if two courses are overlapping"
+        ],
+        "responses": [
+          "Registering in courses with an overlapping schedule is not recommended as courses may also overlap in how exams and assignments are scheduled. \nIn some circumstances, conflicts may be possible. Decisions on course conflicts are handled at the Faculty level. To discuss your options, contact the Faculty Dean’s office of the course that will be impacted. \nQuick reference: \nFaculty of Arts and Social Sciences:  fass.students@ubco@ubc.ca \nFaculty of Science: fos.students.ubco@ubc.ca"
+        ]
+      }, 
+      {
+        "tag": "drop-course",
+        "patterns": [
+          "how do i drop a course?",
+          "how can i drop a course?",
+          "drop course?",
+          "i want to drop a course"
+        ],
+        "responses": [
+          "Be aware of drop/withdrawal deadlines. The first drop deadline allows you to drop without financial penalty or any notation on your transcript. After that, you’ll have to pay for part of the course, and you’ll see a ‘W’ on your transcript. A ‘W’ on your transcript indicates that you have attempted a university course and have chosen to withdraw within university guidelines. A ‘W’ does not get calculated into your overall GPA or sessional evaluation.\nYou can use the registration section of the Student Service Centre (SSC) account to add or withdraw from courses. Be sure you are dropping the course from your registered courses and not from your worklist.  Dropping courses from your worklist is not considered withdrawal from your course \nNote: If you are required to maintain a minimum course load due to housing, funding, or other circumstances, make sure you are aware of how many credits you must be registered in before you think about withdrawing from a course."
+        ]
+      }, 
+      {
+        "tag": "section-comment",
+        "patterns": [
+          "what is a 'section-comment' in the ssc course schedule?",
+          "what is a section comment?",
+          "section comment?",
+          "what does it mean by section comment?"
+        ],
+        "responses": [
+          "Section comments will include important information about the course that the faculty would like you to be aware of. Faculties may use Section Comments to provide information on registration requirements such as, who to contact about registration issues, as well as information on the course content. Be sure to read the Section Comment if one is provided. Section Comments are listed within the course schedule on the right-hand side of the screen."
+        ]
+      }, 
+      {
+        "tag": "course-take",
+        "patterns": [
+          "how do i know what courses to take?",
+          "what courses do i need to take?",
+          "what courses to take?",
+          "courses to take?"
+        ],
+        "responses": [
+          "For first-year students, use our first-year planning guides to plan your schedule.\nFor second, third, and fourth-year students, use this section of your online Academic Calendar to review degree requirements.\nYou may also want to check out ‘Degree Navigator’ on your Student Service Centre (SSC). If you’re not familiar with it, check degree navigator under degree planning."
+        ]
+      }, 
+      {
+        "tag": "class-full",
+        "patterns": [
+          "MY CLASS IS FULL, WHAT DO I DO?",
+          "what to do when a class is full?",
+          "class is full?",
+          "the class i want to take is full?"
+        ],
+        "responses": [
+          "Advisors are unable to register students into full classes.\nRegularly monitor the class on the Student Service Centre (SSC) to see if a seat becomes available. Sometimes another student will drop the course (and open a seat for you), or sometimes the faculty will open more seats. If the course is not “blocked,” then any available seats will be first come, first served.\nIf there’s a waitlist, register for it, but keep watching the SSC to see if a seat opens up. As noted above, if a course is not “blocked”, available seats are first come, first served—even if there is a waitlist."
         ]
       }]
 }

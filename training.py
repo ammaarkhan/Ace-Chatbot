@@ -97,7 +97,7 @@ hist = model.fit(np.array(train_x), np.array(train_y),
                  epochs=50, batch_size=5, verbose=1)
 
 # save the model 
-model.save("chatbotmodelv3.h5", hist)
+model.save("chatbotmodelv4.h5", hist)
 
 print(model.summary())
 
