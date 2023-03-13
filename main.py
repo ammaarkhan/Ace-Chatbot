@@ -79,8 +79,14 @@ with open('results.csv', 'w', newline='') as file:
         for i in list_of_intents:
             for x in i['patterns']:
                 bar += 1
-                # print(x) 
-                res = predict_class(x, modelName)
+                res = predict_class(x, modelName) 
+                if not res:
+                    writer.writerow([x, i['tag'], "null", "no prediction"])
+                    break
+                # print(x)
+                # print(i['tag'])
+                # print(res[0]['intent'])
+                # print(res)
                 writer.writerow([x, i['tag'], res[0]['intent'], res])
                 if i['tag'] == res[0]['intent']:
                     baz += 1

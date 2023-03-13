@@ -153,7 +153,7 @@
           "what to do if two courses are overlapping"
         ],
         "responses": [
-          "Registering in courses with an overlapping schedule is not recommended as courses may also overlap in how exams and assignments are scheduled. \nIn some circumstances, conflicts may be possible. Decisions on course conflicts are handled at the Faculty level. To discuss your options, contact the Faculty Dean’s office of the course that will be impacted. \nQuick reference: \nFaculty of Arts and Social Sciences:  fass.students@ubco@ubc.ca \nFaculty of Science: fos.students.ubco@ubc.ca"
+          "Registering in courses with an overlapping schedule is not recommended as courses may also overlap in how exams and assignments are scheduled. \n\nIn some circumstances, conflicts may be possible. Decisions on course conflicts are handled at the Faculty level. To discuss your options, contact the Faculty Dean’s office of the course that will be impacted. \n\nQuick reference: \n\nFaculty of Arts and Social Sciences:  fass.students@ubco@ubc.ca \n\nFaculty of Science: fos.students.ubco@ubc.ca"
         ]
       }, 
       {
@@ -165,7 +165,7 @@
           "i want to drop a course"
         ],
         "responses": [
-          "Be aware of drop/withdrawal deadlines. The first drop deadline allows you to drop without financial penalty or any notation on your transcript. After that, you’ll have to pay for part of the course, and you’ll see a ‘W’ on your transcript. A ‘W’ on your transcript indicates that you have attempted a university course and have chosen to withdraw within university guidelines. A ‘W’ does not get calculated into your overall GPA or sessional evaluation.\nYou can use the registration section of the Student Service Centre (SSC) account to add or withdraw from courses. Be sure you are dropping the course from your registered courses and not from your worklist.  Dropping courses from your worklist is not considered withdrawal from your course \nNote: If you are required to maintain a minimum course load due to housing, funding, or other circumstances, make sure you are aware of how many credits you must be registered in before you think about withdrawing from a course."
+          "Be aware of drop/withdrawal deadlines. The first drop deadline allows you to drop without financial penalty or any notation on your transcript. After that, you’ll have to pay for part of the course, and you’ll see a ‘W’ on your transcript. A ‘W’ on your transcript indicates that you have attempted a university course and have chosen to withdraw within university guidelines. A ‘W’ does not get calculated into your overall GPA or sessional evaluation.\n\nYou can use the registration section of the Student Service Centre (SSC) account to add or withdraw from courses. Be sure you are dropping the course from your registered courses and not from your worklist.  Dropping courses from your worklist is not considered withdrawal from your course \n\nNote: If you are required to maintain a minimum course load due to housing, funding, or other circumstances, make sure you are aware of how many credits you must be registered in before you think about withdrawing from a course."
         ]
       }, 
       {
@@ -189,19 +189,67 @@
           "courses to take?"
         ],
         "responses": [
-          "For first-year students, use our first-year planning guides to plan your schedule.\nFor second, third, and fourth-year students, use this section of your online Academic Calendar to review degree requirements.\nYou may also want to check out ‘Degree Navigator’ on your Student Service Centre (SSC). If you’re not familiar with it, check degree navigator under degree planning."
+          "For first-year students, use our first-year planning guides to plan your schedule.\n\nFor second, third, and fourth-year students, use this section of your online Academic Calendar to review degree requirements.\n\nYou may also want to check out ‘Degree Navigator’ on your Student Service Centre (SSC). If you’re not familiar with it, check degree navigator under degree planning."
         ]
       }, 
       {
-        "tag": "class-full",
+        "tag": "class-blocked",
         "patterns": [
-          "MY CLASS IS FULL, WHAT DO I DO?",
-          "what to do when a class is full?",
-          "class is full?",
-          "the class i want to take is full?"
+          "MY CLASS IS blocked, WHAT DO I DO?",
+          "what to do when a class is blocked?",
+          "class is blocked?",
+          "the class i want to take is blocked?"
         ],
         "responses": [
-          "Advisors are unable to register students into full classes.\nRegularly monitor the class on the Student Service Centre (SSC) to see if a seat becomes available. Sometimes another student will drop the course (and open a seat for you), or sometimes the faculty will open more seats. If the course is not “blocked,” then any available seats will be first come, first served.\nIf there’s a waitlist, register for it, but keep watching the SSC to see if a seat opens up. As noted above, if a course is not “blocked”, available seats are first come, first served—even if there is a waitlist."
+          "Read the ‘Section Comments’ for instructions."
+        ]
+      }, 
+      {
+        "tag": "yellow-warning",
+        "patterns": [
+          "I’M GETTING A YELLOW WARNING – WHAT DOES THAT MEAN?",
+          "why is it showing a yellow warning?",
+          "yellow warning?",
+          "what does it mean by yellow warning?"
+        ],
+        "responses": [
+          "A yellow warning is like a yield sign. Are you sure you meet the prerequisites for the course? If you are, then proceed with registration. If the department offering the course later determines that you do not meet the prerequisites, you may be de-registered from the course (prior to the add/drop deadline)."
+        ]
+      }, 
+      {
+        "tag": "red-warning",
+        "patterns": [
+          "I’M GETTING A RED WARNING – WHAT DOES THAT MEAN?",
+          "why is it showing a red warning?",
+          "red warning?",
+          "what does it mean by red warning?"
+        ],
+        "responses": [
+          "A red warning is like a stop sign. The system will not allow you to register. It is very likely you do not meet the prerequisites and you may want to consider registering those first."
+        ]
+      }, 
+      {
+        "tag": "cant-get-lab",
+        "patterns": [
+          "I’M REGISTERED IN A LECTURE BUT I CAN’T GET INTO A LAB. WHAT DO I DO?",
+          "i can't get into a lab session",
+          "cant get into a lab",
+          "what to do if i cant get into a lab for a registered course?"
+        ],
+        "responses": [
+          "If you have a seat in the lecture and labs are full or blocked, keep an eye on the Student Service Centre (SSC) for a seat to become available in a lab. Sometimes students drop the course which opens a seat for you and sometimes the faculty opens another lab section. If you’re concerned about being unable to register the lab, contact the relevant department for assistance."
+        ]
+      }, 
+      {
+        "tag": "w-mean",
+        "patterns": [
+          "what does a 'w' mean?",
+          "'w' meaning?",
+          "why is it showing a 'w'?",
+          "what does it mean by 'w'"
+        ],
+        "responses": [
+          "A 'W' on your transcript indicates that you have attempted a university course and have chosen to withdraw within university guidelines. A 'W' does not get calculated into your overall GPA or sessional evaluation.\n\nA withdrawal does not detract from your academic record.\n\nIf you are concerned about your academic history and applications to other schools or graduate programs, you should contact the respective organization for information on how they might regard a 'W' on a transcript.\n\nIf you drop your course before the add/drop deadline, a 'W' will not appear on your transcript. Add/drop deadlines are listed on the SSC Course Schedule, when viewing a specific course, in a specific term. These deadlines are also listed in the online Academic Calendar."
         ]
       }]
 }
