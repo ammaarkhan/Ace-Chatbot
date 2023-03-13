@@ -94,10 +94,11 @@ with open('results.csv', 'w', newline='') as file:
         bar = 0
         baz = 0
 
+print("\nResults.csv updated! \nWelcome to chatbot!")
 while True:
-    message = input("")
+    message = input("\nUser: ")
     if message == "end":
         break
     results_list = predict_class(message, 'chatbotmodelv4.h5') # [{'intent': 'greeting', 'probability': '0.9163127'}]
     final_res = get_response(results_list, intents) # randomly chosen response with same tag as prediction
-    print(final_res)
+    print("Ace: " + final_res)

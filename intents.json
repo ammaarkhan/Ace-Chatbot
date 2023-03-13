@@ -17,21 +17,6 @@
         ]
     },
     {
-        "tag": "goodbye",
-        "patterns": [
-        "Goodbye",
-        "Bye",
-        "See you later",
-        "Talk to you later"
-        ],
-        "responses": [
-        "Goodbye! Have a great day!",
-        "Bye! See you soon!",
-        "Take care and talk to you later!",
-        "See you later!"
-        ]
-    },
-    {
         "tag": "thanks",
         "patterns": [
         "Thank you",
@@ -57,24 +42,9 @@
         "Name"
         ],
         "responses": [
-        "My name is Chatbot!",
-        "You can call me Chatbot!",
-        "I go by the name Chatbot!"
-        ]
-    },
-    {
-        "tag": "age",
-        "patterns": [
-        "How old are you?",
-        "What's your age?",
-        "When were you born?",
-        "Are you young or old?",
-        "Age"
-        ],
-        "responses": [
-        "I was created in 2021, so I'm still very young!",
-        "I don't have an age as I am a virtual assistant, but I was developed in 2021.",
-        "As a chatbot, I don't age, but I was launched in 2021."
+        "My name is Ace.!",
+        "You can call me Ace Chatbot!",
+        "I go by the name Ace!"
         ]
     },
     {
@@ -104,8 +74,7 @@
         "responses": [
           "Thank you so much! You're pretty great yourself.",
           "You're too kind. I'm just doing my best to be helpful.",
-          "Wow, thank you! It's always nice to hear a compliment.",
-          "You're making me blush! I'm glad you're enjoying our conversation."
+          "Wow, thank you! It's always nice to hear a compliment."
         ]
       }, 
       {
@@ -207,7 +176,7 @@
       {
         "tag": "yellow-warning",
         "patterns": [
-          "I’M GETTING A YELLOW WARNING – WHAT DOES THAT MEAN?",
+          "I am GETTING A YELLOW WARNING - WHAT DOES THAT MEAN?",
           "why is it showing a yellow warning?",
           "yellow warning?",
           "what does it mean by yellow warning?"
@@ -219,7 +188,7 @@
       {
         "tag": "red-warning",
         "patterns": [
-          "I’M GETTING A RED WARNING – WHAT DOES THAT MEAN?",
+          "I am GETTING A RED WARNING - WHAT DOES THAT MEAN?",
           "why is it showing a red warning?",
           "red warning?",
           "what does it mean by red warning?"
@@ -231,7 +200,7 @@
       {
         "tag": "cant-get-lab",
         "patterns": [
-          "I’M REGISTERED IN A LECTURE BUT I CAN’T GET INTO A LAB. WHAT DO I DO?",
+          "I am REGISTERED IN A LECTURE BUT I can not GET INTO A LAB. WHAT DO I DO?",
           "i can't get into a lab session",
           "cant get into a lab",
           "what to do if i cant get into a lab for a registered course?"
