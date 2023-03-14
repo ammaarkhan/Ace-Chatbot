@@ -38,8 +38,7 @@
         "What's your name?",
         "May I know your name?",
         "Do you have a name?",
-        "What do people call you?",
-        "Name"
+        "What do people call you?"
         ],
         "responses": [
         "My name is Ace.!",
@@ -53,8 +52,7 @@
         "Can you help me?",
         "I need assistance",
         "Can you assist me?",
-        "What can you do for me?",
-        "Help"
+        "What can you do for me?"
         ],
         "responses": [
         "Of course! What do you need help with?",
@@ -219,6 +217,161 @@
         ],
         "responses": [
           "A 'W' on your transcript indicates that you have attempted a university course and have chosen to withdraw within university guidelines. A 'W' does not get calculated into your overall GPA or sessional evaluation.\n\nA withdrawal does not detract from your academic record.\n\nIf you are concerned about your academic history and applications to other schools or graduate programs, you should contact the respective organization for information on how they might regard a 'W' on a transcript.\n\nIf you drop your course before the add/drop deadline, a 'W' will not appear on your transcript. Add/drop deadlines are listed on the SSC Course Schedule, when viewing a specific course, in a specific term. These deadlines are also listed in the online Academic Calendar."
+        ]
+      }, 
+      {
+        "tag": "course-back-2-back",
+        "patterns": [
+          "can i register in courses scheduled back-to-back?",
+          "registering in back to back courses?",
+          "am i allowed to register in back to back courses?"
+        ],
+        "responses": [
+          "All courses will finish 10 minutes before the time listed in the course schedule. The size of the campus also allows students to register in back-to-back courses."
+        ]
+      }, 
+      {
+        "tag": "drop-course-after-deadline",
+        "patterns": [
+          "I MISSED THE DEADLINE FOR DROPPING A COURSE, WHAT DO I DO?",
+          "dropping a course after the deadline",
+          "can i drop a course after the deadline",
+          "i want to drop a course but the deadline has past"
+        ],
+        "responses": [
+          "It is very difficult to drop a course after the final deadline has passed. However, if you feel you have exceptional circumstances, you should speak to an Academic & Career Advisor about completing a ‘Late Withdrawal Request’ form.\n\nBe forewarned that these requests are not granted lightly and you will need to provide compelling reasons for having missed the deadlines."
+        ]
+      }, 
+      {
+        "tag": "stt-mean",
+        "patterns": [
+          "what does 'stt' mean?",
+          "stt meaning",
+          "stt fullform?",
+          "what does it mean by 'stt'?"
+        ],
+        "responses": [
+          "A Standard Timetable (STT) is a set timetable that incorporates the courses required for a program. If an STT is required for your program, you must register for the STT before adding individual courses. Not all programs offer STTs.\n\nPrograms that offer STTs include Applied Science (year one only), Fine Arts (year one only) Management (year three only). If students in any of these programs would like to make changes to their schedule they will have to contact their program advisor."
+        ]
+      }, 
+      {
+        "tag": "advising-block",
+        "patterns": [
+          "what do i do if i have an 'advising block' on my registration?",
+          "why is it showing advising block?",
+          "advising block?",
+          "why do i have an advising block?"
+        ],
+        "responses": [
+          "Reasons for this can vary. Book an appointment with an Academic & Career Advisor to have your file reviewed as soon as possible."
+        ]
+      }, 
+      {
+        "tag": "unofficial-transcript",
+        "patterns": [
+          "WHERE DO I FIND AN UNOFFICIAL TRANSCRIPT?",
+          "where can i get an unofficial transcript?",
+          "unofficial transcript",
+          "i want an unofficial transcript"
+        ],
+        "responses": [
+          "Log onto the Student Service Centre (SSC), hover over ‘Grades and Records’ then select ‘Your Grades Summary’. This is your unofficial transcript, which you can print and utilize as needed."
+        ]
+      }, 
+      {
+        "tag": "ubc-online-courses",
+        "patterns": [
+          "HOW DO I FIND UBC ONLINE COURSES?",
+          "where can i find online ubc courses?",
+          "ubc online courses?",
+          "how can i take a ubc online course?"
+        ],
+        "responses": [
+          "Learn more about distance learning courses:https://distancelearning.ubc.ca"
+        ]
+      }, 
+      {
+        "tag": "options-beyond-on-campus",
+        "patterns": [
+          "WHAT ARE MY STUDY OPTIONS BEYOND ON-CAMPUS UBCO COURSES?",
+          "options others than on-campus ubco courses?",
+          "what can i do other than on-campus ubco courses?",
+          "study options other than campus courses"
+        ],
+        "responses": [
+          "Check out summer and off-campus study options:https://students.ok.ubc.ca/academic-success/degree-planning/study-options/"
+        ]
+      }, 
+      {
+        "tag": "declare-major",
+        "patterns": [
+          "HOW DO I DECLARE OR CHANGE MY MAJOR OR SPECIALIZATION?",
+          "how to declare my major or specialization",
+          "i want to change my major or specialization",
+          "declare major or specialization?"
+        ],
+        "responses": [
+          "Check out declaring majors:https://students.ok.ubc.ca/academic-success/degree-planning/declaring-majors/"
+        ]
+      }, 
+      {
+        "tag": "failed-course",
+        "patterns": [
+          "I FAILED A COURSE, WHAT CAN I DO? CAN I RETAKE A COURSE THAT I FAILED?",
+          "can i retake a course that i failed",
+          "failed course",
+          "what should i do if i failed a course?"
+        ],
+        "responses": [
+          "It’s never easy to fail a course. You’re welcome to discuss it with an Academic & Career Advisor.\n\nIf you failed a course once, you can retake it by registering the course again. If you’re unable to register the course, contact the relevant department for assistance.\n\nIf you failed a course twice, you will need your Dean’s permission to take the course a third time. Learn more."
+        ]
+      }, 
+      {
+        "tag": "not-happy-grade",
+        "patterns": [
+          "I AM NOT HAPPY WITH MY GRADE (AND I DID NOT FAIL). SHOULD I RETAKE A COURSE? WHAT DOES IT MEAN FOR MY TRANSCRIPT?",
+          "can i retake a course that I passed?",
+          "Can i retake a course if I'm not happy with the grade",
+          "retake course that i did bad in?"
+        ],
+        "responses": [
+          "Sometimes, it’s necessary to retake a course if the course is required and a specific grade is required in that course. Sometimes, there is no reason to repeat a course that you passed. If you’re unsure of your situation, speak with an Academic & Career Advisor.\n\nAll attempts at a course are listed on your official transcript (unless you withdrew before the drop deadline).\n\nHow repeated courses are calculated depends on the intention of the calculation and which institution is completing the calculation. This can vary greatly. If you’re unsure of your situation, speak with an Academic & Career Advisor."
+        ]
+      }, 
+      {
+        "tag": "dont-meet-prereq",
+        "patterns": [
+          "I DO NOT MEET THE PREREQUISITES FOR A COURSE I WISH TO TAKE. WHAT DO I DO?",
+          "can i take a course when i do not meet the prerequisites?",
+          "i don't meet the prerequisites for a course",
+          "how to take a course without the prerequisites"
+        ],
+        "responses": [
+          "Ideally, you acquire the prerequisite for the course.\n\nPrerequisites have been put in place by your faculty to ensure you have what you need to be successful in the course. If you feel strongly that you can be successful without the prerequisite, there is a ‘prerequisite waiver’ (available on your faculty website). Be sure to clearly articulate why you will be successful despite not having the prerequisites."
+        ]
+      }, 
+      {
+        "tag": "how-many-courses",
+        "patterns": [
+          "HOW MANY COURSES SHOULD I TAKE?",
+          "HOW MANY COURSES DO I HAVE TO TAKE?",
+          "how do i know how many courses i should register for",
+          "number of courses to take?"
+        ],
+        "responses": [
+          "Use the online Academic Calendar to see how your faculty wishes you to proceed (courses per term and year). However, we understand that many students have reasons for taking fewer credits (job, family obligations, disability, etc.).\n\nSometimes, students are required to maintain a full-time course load (minimum nine credits per term in a Winter Session). For example, students residing in UBC Student Housing, students using student loans, and international students are required to maintain full-time status.\n\nWe generally do not advise students take more than the recommended credits your faculty advises. Keep in mind there are many aspects to university life and you may want to have time to explore the many opportunities that university affords you."
+        ]
+      }, 
+      {
+        "tag": "course-meet-deg-req",
+        "patterns": [
+          "I am WONDERING HOW A COURSE i am CONSIDERING WOULD MEET MY DEGREE REQUIREMENTS. HOW DO I KNOW?",
+          "i want to know how a meets my degree requirements ",
+          "how does a course fit with my degree",
+          "how to know if a course meets my requirements"
+        ],
+        "responses": [
+          "Use the online Academic Calendar to guide you."
         ]
       }]
 }
