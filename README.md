@@ -1,10 +1,10 @@
 # Chatbot
 
-The TensorFlow AI chatbot project is an exciting application of machine learning techniques that provides a conversational interface for users to interact with. The chatbot is built on a deep neural network developed using TensorFlow, an open-source machine learning framework.
+The Ace chatbot is an application of machine learning techniques that provides a conversational interface for students to interact with for common advising questions. Ace is built on a neural network developed using TensorFlow.
 
-The chatbot is trained on a dataset of sample conversations using advanced natural language processing techniques such as sentiment analysis and tokenization. These techniques help the chatbot to understand and respond appropriately to user messages based on their sentiment and linguistic structure.
+The chatbot is trained on 'patterns' for a particular question, matched to a tag, using natural language processing techniques such as tokenization and NER. These techniques help the chatbot to understand and respond appropriately to user messages.
 
-Sentiment analysis enables the chatbot to analyze the tone of user messages and respond accordingly, for example by providing reassurance or empathy in response to negative sentiment. Tokenization, on the other hand, involves breaking down user messages into smaller units such as words or phrases, which allows the chatbot to more accurately understand the meaning behind user input.
+Tokenization involves breaking down user messages into smaller units such as words or phrases, which allows the chatbot to more accurately understand the meaning behind user input.
 
 The deep neural network powering the chatbot is trained on a large dataset of sample conversations, which allows it to recognize patterns in user input and generate appropriate responses with a high degree of accuracy. The chatbot can also be fine-tuned and customized for specific industries or use cases.
 
