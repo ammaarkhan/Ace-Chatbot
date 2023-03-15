@@ -1,4 +1,4 @@
-# Chatbot
+# Ace Chatbot
 
 The Ace chatbot is an application of machine learning techniques that provides a conversational interface for students to interact with, for common advising questions. Ace is built on a neural network developed using TensorFlow.
 
