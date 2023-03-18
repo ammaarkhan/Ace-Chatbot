@@ -26,7 +26,8 @@ def clean_up_sentences(sent):
     return sentence_words
 
 def bagofw(sent):
-    # separate words from input sentence
+    # separate words from input sentence 
+    sent = sent.lower()
     sentence_words = clean_up_sentences(sent) # array of root words from input sentence
     bag = [0]*len(words) # create array of zeros same size of words array
     # if w in 'sentence_words' is in 'words' array, make bag[i] = 1 at same index as where w is in 'words' array
@@ -55,8 +56,8 @@ def predict_class(sent, modelName):
 def get_response(results_list, intents_json):
     result = ""
     if bool(results_list) == False:
-        result = random.choice(["Sorry, can't understand you", "Please give me more info",
-                "Not sure I understand"]) 
+        result = random.choice(["Sorry, can't understand you. Please rephrase the question", "Please give me more info",
+                "Not sure I understand, Please rephrase the question"]) 
         return result
     tag = results_list[0]['intent'] # gets the 'intent' value from the dictionary
     list_of_intents = intents_json['intents'] # retrieving json file
@@ -79,7 +80,7 @@ with open('results.csv', 'w', newline='') as file:
         for i in list_of_intents:
             for x in i['patterns']:
                 bar += 1
-                res = predict_class(x, modelName) 
+                res = predict_class(x.lower(), modelName) 
                 if not res:
                     writer.writerow([x, i['tag'], "null", "no prediction"])
                     break
