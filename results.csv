@@ -1,5 +1,5 @@
 Pattern,AccIntent,CalcIntent,RawCalc
-,model name:,chatbotmodelv4.h5
+,model name:,chatbotmodelv4.h5,
 Good Evening,greeting,greeting,"[{'intent': 'greeting', 'probability': '0.44926313'}]"
 Hello there,greeting,greeting,"[{'intent': 'greeting', 'probability': '0.90364444'}]"
 Hi there,greeting,greeting,"[{'intent': 'greeting', 'probability': '0.90364444'}]"
@@ -121,4 +121,4 @@ I am WONDERING HOW A COURSE i am CONSIDERING WOULD MEET MY DEGREE REQUIREMENTS. 
 i want to know how a meets my degree requirements,course-meet-deg-req,course-meet-deg-req,"[{'intent': 'course-meet-deg-req', 'probability': '0.8239071'}]"
 how does a course fit with my degree,course-meet-deg-req,course-meet-deg-req,"[{'intent': 'course-meet-deg-req', 'probability': '0.8037341'}]"
 how to know if a course meets my requirements,course-meet-deg-req,course-meet-deg-req,"[{'intent': 'course-meet-deg-req', 'probability': '0.8212568'}]"
-,Accuracy,99.17355371900827
+,Accuracy,99.17355372,
