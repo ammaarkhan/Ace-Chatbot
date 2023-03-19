@@ -34,7 +34,7 @@ def bagofw(sent):
     # if w in 'sentence_words' is in 'words' array, make bag[i] = 1 at same index as where w is in 'words' array
     for w in sentence_words: 
         for i, word in enumerate(words):
-            if w == word:
+            if w == word.lower(): # this is to the lower the words in the pkl file
                 test = test + " " + w
                 bag[i] = 1
     print(test)

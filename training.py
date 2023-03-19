@@ -40,7 +40,7 @@ for intent in intents['intents']:
             classes.append(intent['tag'])
 
 # print(classes) # for testing, ex: ['greeting', 'name', 'age']
-words = [lemmatizer.lemmatize(word) # lemmatizes the word - gives root word
+words = [lemmatizer.lemmatize(word.lower()) # lemmatizes the word - gives root word
     for word in words if word not in ignore_letters] 
 words = sorted(set(words)) # removes the duplicates
 # print(words) # for test, ex: ["'s", 'age', 'are', 'call'.......]
@@ -101,6 +101,9 @@ train_y = list(training[:, 1]) # ex: [1, 0, 0]
 # hist = model.fit(np.array(train_x), np.array(train_y), 
 #                  epochs=100, batch_size=5, verbose=1)
 
+
+
+
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, LeakyReLU
 from tensorflow.keras.optimizers import Adam
@@ -123,9 +126,8 @@ model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics=['ac
 # Train model
 hist = model.fit(np.array(train_x), np.array(train_y), epochs=100, batch_size=5, verbose=1)
 
-
 # save the model 
-model.save("chatbotmodelv4.h5", hist)
+model.save("models/chatbotmodelv4.h5", hist)
 
 print(model.summary())
 
