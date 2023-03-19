@@ -9,7 +9,7 @@ from tensorflow import keras
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 
-model_list = ['chatbotmodelv4.h5'] # 'chatbotmodelv1.h5', 'chatbotmodelv2.h5', 'chatbotmodelv3.h5'
+model_list = ['models/chatbotmodelv4.h5'] # 'chatbotmodelv1.h5', 'chatbotmodelv2.h5', 'chatbotmodelv3.h5'
 
 # creating a WordNetLemmatizer() class to get the root words
 lemmatizer = WordNetLemmatizer()
@@ -26,6 +26,7 @@ def clean_up_sentences(sent):
     return sentence_words
 
 def bagofw(sent):
+    test = ""
     # separate words from input sentence 
     sent = sent.lower()
     sentence_words = clean_up_sentences(sent) # array of root words from input sentence
@@ -34,7 +35,9 @@ def bagofw(sent):
     for w in sentence_words: 
         for i, word in enumerate(words):
             if w == word:
+                test = test + " " + w
                 bag[i] = 1
+    print(test)
     return np.array(bag)
 
 
@@ -100,6 +103,6 @@ while True:
     message = input("\nUser: ")
     if message == "end":
         break
-    results_list = predict_class(message, 'chatbotmodelv4.h5') # [{'intent': 'greeting', 'probability': '0.9163127'}]
+    results_list = predict_class(message, 'models/chatbotmodelv4.h5') # [{'intent': 'greeting', 'probability': '0.9163127'}]
     final_res = get_response(results_list, intents) # randomly chosen response with same tag as prediction
     print("Ace: " + final_res)
