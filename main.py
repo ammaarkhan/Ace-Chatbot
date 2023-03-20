@@ -22,7 +22,7 @@ classes = pkl.load(open('classes.pkl', 'rb'))
 # model = load_model('chatbotmodelv1.h5')
 
 def clean_up_sentences(sent):
-    sentence_words = nltk.word_tokenize(sent) # returns an array of words for the sentence 
+    sentence_words = nltk.word_tokenize(sent.replace("'", "")) # returns an array of words for the sentence 
     sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words] # returns root word for each word in array
     return sentence_words
 

@@ -27,7 +27,7 @@ ignore_letters = ["?", "!", ",", ".", "'", "(", ")", "-"]
 for intent in intents['intents']:
     for pattern in intent['patterns']:
         # separating words from patterns
-        word_list = nltk.word_tokenize(contractions.fix(pattern)) # returns an array of words for each entry in the pattern, one by one for every pattern in patterns ex: ['hello']
+        word_list = nltk.word_tokenize(contractions.fix(pattern).replace("'", "")) # returns an array of words for each entry in the pattern, one by one for every pattern in patterns ex: ['hello']
         # print(word_list) # for testing
         words.extend(word_list) # adding the word_list output for each entry  of root words to words array
         # print("this is the words: {}".format(words)) # for testing, ex: ['hello', 'hi', 'hey', 'what', "'s", 'up', '?'] (after few iterations of loop)
