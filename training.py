@@ -3,6 +3,7 @@ import json
 import pickle as pkl
 import numpy as np
 import nltk
+import contractions
 # nltk.download('punkt') # run this line first time if error shows
 # nltk.download('wordnet') # run this line first time if error shows
 
@@ -22,11 +23,11 @@ intents = json.loads(open("intents.json").read())
 words = []
 classes = []
 documents = []
-ignore_letters = ["?", "!", ",", "."]
+ignore_letters = ["?", "!", ",", ".", "'", "(", ")", "-"]
 for intent in intents['intents']:
     for pattern in intent['patterns']:
         # separating words from patterns
-        word_list = nltk.word_tokenize(pattern) # returns an array of words for each entry in the pattern, one by one for every pattern in patterns ex: ['hello']
+        word_list = nltk.word_tokenize(contractions.fix(pattern)) # returns an array of words for each entry in the pattern, one by one for every pattern in patterns ex: ['hello']
         # print(word_list) # for testing
         words.extend(word_list) # adding the word_list output for each entry  of root words to words array
         # print("this is the words: {}".format(words)) # for testing, ex: ['hello', 'hi', 'hey', 'what', "'s", 'up', '?'] (after few iterations of loop)
@@ -60,7 +61,7 @@ for doc in documents:
     bag = []
     word_patterns = doc[0] # ex: ['hello']
     word_patterns = [lemmatizer.lemmatize(word.lower()) for word in word_patterns]
-    # print(word_patterns) # ^^ does nothing for the current intents we have
+    # print(word_patterns) 
     for word in words:
         bag.append(1) if word in word_patterns else bag.append(0)
         # print(bag)
@@ -124,11 +125,11 @@ optimizer = Adam(lr=0.001, decay=1e-6)
 model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics=['accuracy'])
 
 # Train model
-hist = model.fit(np.array(train_x), np.array(train_y), epochs=100, batch_size=5, verbose=1)
+hist = model.fit(np.array(train_x), np.array(train_y), epochs=70, batch_size=5, verbose=1)
 
 # save the model 
 model.save("models/chatbotmodelv4.h5", hist)
 
 print(model.summary())
 
-print("Training Complete!")
+print("\nTraining Complete!")

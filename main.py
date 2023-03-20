@@ -4,6 +4,7 @@ import pickle as pkl
 import numpy as np
 import nltk
 import csv
+import contractions
 
 from tensorflow import keras
 from keras.models import load_model
@@ -28,7 +29,7 @@ def clean_up_sentences(sent):
 def bagofw(sent):
     test = ""
     # separate words from input sentence 
-    sent = sent.lower()
+    sent = contractions.fix(sent.lower())
     sentence_words = clean_up_sentences(sent) # array of root words from input sentence
     bag = [0]*len(words) # create array of zeros same size of words array
     # if w in 'sentence_words' is in 'words' array, make bag[i] = 1 at same index as where w is in 'words' array
@@ -37,12 +38,12 @@ def bagofw(sent):
             if w == word.lower(): # this is to the lower the words in the pkl file
                 test = test + " " + w
                 bag[i] = 1
-    print(test)
+            # else:
+            #     words.append(w)
+    print("Model input:" + test)
     return np.array(bag)
 
-
-def predict_class(sent, modelName):
-    model = load_model(modelName)
+def predict_class(sent):
     bow = bagofw(sent) # array of 0s and 1s, 1 representing the word is present
     res = model.predict(np.array([bow]))[0] # predict and get the result, of type numpy.ndarray
     # resss = model.predict(np.array([bow])) # ex: [[0.9838628 0.00768638 0.0084508 ]] (for input 'Hi')
@@ -70,7 +71,10 @@ def get_response(results_list, intents_json):
             break
     return result
 
-print("Chatbot running")
+print("Chatbot running\n")
+
+print("Loading model")
+model = load_model(model_list[0])
 
 bar = 0
 baz = 0
@@ -83,7 +87,7 @@ with open('results.csv', 'w', newline='') as file:
         for i in list_of_intents:
             for x in i['patterns']:
                 bar += 1
-                res = predict_class(x.lower(), modelName) 
+                res = predict_class(x.lower()) 
                 if not res:
                     writer.writerow([x, i['tag'], "null", "no prediction"])
                     break
@@ -95,14 +99,19 @@ with open('results.csv', 'w', newline='') as file:
                 if i['tag'] == res[0]['intent']:
                     baz += 1
         writer.writerow([ "", "Accuracy", (baz/bar)*100])
+        print("\nAccuracy of model: " +str(((baz/bar)*100)))
         bar = 0
         baz = 0
 
-print("\nResults.csv updated! \nWelcome to chatbot!")
+print("\nResults.csv updated! \n\nWelcome to chatbot!")
+
+for i, word in enumerate(words):
+    print (str(i) + " " + word)
+    
 while True:
     message = input("\nUser: ")
     if message == "end":
         break
-    results_list = predict_class(message, 'models/chatbotmodelv4.h5') # [{'intent': 'greeting', 'probability': '0.9163127'}]
+    results_list = predict_class(message) # [{'intent': 'greeting', 'probability': '0.9163127'}]
     final_res = get_response(results_list, intents) # randomly chosen response with same tag as prediction
     print("Ace: " + final_res)
