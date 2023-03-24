@@ -373,5 +373,17 @@
         "responses": [
           "Use the online Academic Calendar to guide you."
         ]
+      }, 
+      {
+        "tag": "course-major",
+        "patterns": [
+          "do i have to take  if im majoring in  ?",
+          "is it a requirement for me to take  if im majoring in?",
+          "i am majoring in  , do i have to take  ?",
+          "can i take  as  major?"
+        ],
+        "responses": [
+          "temp result"
+        ]
       }]
 }

@@ -18,7 +18,8 @@
   },
   "labels":{
     "ner":[
-      "COR"
+      "COR",
+      "MAJOR"
     ]
   },
   "pipeline":[
