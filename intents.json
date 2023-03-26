@@ -6,6 +6,7 @@
         "Good Evening",
         "Hello",
         "Hi",
+        "Hey",
         "Good Morning",
         "Good Afternoon"
         ],
@@ -51,8 +52,7 @@
         "patterns": [
         "Can you help me?",
         "I need assistance",
-        "Can you assist me?",
-        "What can you do for me?"
+        "Can you assist me?"
         ],
         "responses": [
         "Of course! What do you need help with?",
@@ -61,329 +61,330 @@
         "Certainly! What do you need assistance with?"
         ]
     },
-      {
-        "tag": "compliment",
-        "patterns": [
-          "You're amazing!",
-          "You're the best chatbot ever",
-          "You're so smart",
-          "You're awesome"
-        ],
-        "responses": [
-          "Thank you so much! You're pretty great yourself.",
-          "You're too kind. I'm just doing my best to be helpful.",
-          "Wow, thank you! It's always nice to hear a compliment."
-        ]
-      }, 
-      {
-        "tag": "registration-time",
-        "patterns": [
-          "where do i find my registration date and time?",
-          "Registration date and time?",
-          "how do i know when my registration time is?",
-          "when is my registration date and time?"
-        ],
-        "responses": [
-          "Personalized registration dates are available to view on the Student Service Centre (SSC), typically around a month prior to your registration opening. Sign in to the SSC, hover over the Registration tab, then select ‘Registration’ to determine your registration date. For a rough idea of when you will be registering for courses you can check registration dates."
-        ]
-      }, 
-      {
-        "tag": "blocked-course",
-        "patterns": [
-          "what is a 'blocked' course?",
-          "why is it showing blocked course?",
-          "blocked course?",
-          "what does it mean by blocked course?"
-        ],
-        "responses": [
-          "The faculty has chosen to block the course from registration once it is filled and will now manage the wait-list accordingly. If the course is blocked with a wait-list, sign up for the wait-list. If the course is blocked with no wait-list available, read the Section Comments to find out more specific information. If no information is available under the Section Comments, you are welcome to contact the specific unit offering the course to find out more registration details."
-        ]
-      }, 
-      {
-        "tag": "restricted-course",
-        "patterns": [
-          "what is a 'restricted' course?",
-          "why is it showing restricted course?",
-          "restricted course?",
-          "what does it mean by restricted course?"
-        ],
-        "responses": [
-          "Some faculties choose to restrict who can register in their course(s). A course can be restricted by year level (year >= 3), degree program (BMGT-O), specialization/major (MAJ PSYO), or a combination of these options (year >=2, MAJ PSYO). How the course is restricted will be listed below the seat summary in the course schedule. If you meet the restrictions you will be able to register in the course."
-        ]
-      }, 
-      {
-        "tag": "two-course-overlap",
-        "patterns": [
-          "CAN I REGISTER IN TWO COURSES THAT OVERLAP IN MY SCHEDULE?",
-          "two courses are overlapping in my schedule",
-          "two courses overlapping",
-          "what to do if two courses are overlapping"
-        ],
-        "responses": [
-          "Registering in courses with an overlapping schedule is not recommended as courses may also overlap in how exams and assignments are scheduled. \n\nIn some circumstances, conflicts may be possible. Decisions on course conflicts are handled at the Faculty level. To discuss your options, contact the Faculty Dean’s office of the course that will be impacted. \n\nQuick reference: \n\nFaculty of Arts and Social Sciences:  fass.students@ubco@ubc.ca \n\nFaculty of Science: fos.students.ubco@ubc.ca"
-        ]
-      }, 
-      {
-        "tag": "drop-course",
-        "patterns": [
-          "how do i drop a course?",
-          "how can i drop a course?",
-          "drop course?",
-          "i want to drop a course"
-        ],
-        "responses": [
-          "Be aware of drop/withdrawal deadlines. The first drop deadline allows you to drop without financial penalty or any notation on your transcript. After that, you’ll have to pay for part of the course, and you’ll see a ‘W’ on your transcript. A ‘W’ on your transcript indicates that you have attempted a university course and have chosen to withdraw within university guidelines. A ‘W’ does not get calculated into your overall GPA or sessional evaluation.\n\nYou can use the registration section of the Student Service Centre (SSC) account to add or withdraw from courses. Be sure you are dropping the course from your registered courses and not from your worklist.  Dropping courses from your worklist is not considered withdrawal from your course \n\nNote: If you are required to maintain a minimum course load due to housing, funding, or other circumstances, make sure you are aware of how many credits you must be registered in before you think about withdrawing from a course."
-        ]
-      }, 
-      {
-        "tag": "section-comment",
-        "patterns": [
-          "what is a 'section-comment' in the ssc course schedule?",
-          "what is a section comment?",
-          "section comment?",
-          "what does it mean by section comment?"
-        ],
-        "responses": [
-          "Section comments will include important information about the course that the faculty would like you to be aware of. Faculties may use Section Comments to provide information on registration requirements such as, who to contact about registration issues, as well as information on the course content. Be sure to read the Section Comment if one is provided. Section Comments are listed within the course schedule on the right-hand side of the screen."
-        ]
-      }, 
-      {
-        "tag": "course-take",
-        "patterns": [
-          "how do i know what courses to take?",
-          "what courses do i need to take?",
-          "what courses to take?",
-          "courses to take?"
-        ],
-        "responses": [
-          "For first-year students, use our first-year planning guides to plan your schedule.\n\nFor second, third, and fourth-year students, use this section of your online Academic Calendar to review degree requirements.\n\nYou may also want to check out ‘Degree Navigator’ on your Student Service Centre (SSC). If you’re not familiar with it, check degree navigator under degree planning."
-        ]
-      }, 
-      {
-        "tag": "class-blocked",
-        "patterns": [
-          "MY CLASS IS blocked, WHAT DO I DO?",
-          "what to do when a class is blocked?",
-          "class is blocked?",
-          "the class i want to take is blocked?"
-        ],
-        "responses": [
-          "Read the ‘Section Comments’ for instructions."
-        ]
-      }, 
-      {
-        "tag": "yellow-warning",
-        "patterns": [
-          "I am GETTING A YELLOW WARNING - WHAT DOES THAT MEAN?",
-          "why is it showing a yellow warning?",
-          "yellow warning?",
-          "what does it mean by yellow warning?"
-        ],
-        "responses": [
-          "A yellow warning is like a yield sign. Are you sure you meet the prerequisites for the course? If you are, then proceed with registration. If the department offering the course later determines that you do not meet the prerequisites, you may be de-registered from the course (prior to the add/drop deadline)."
-        ]
-      }, 
-      {
-        "tag": "red-warning",
-        "patterns": [
-          "I am GETTING A RED WARNING - WHAT DOES THAT MEAN?",
-          "why is it showing a red warning?",
-          "red warning?",
-          "what does it mean by red warning?"
-        ],
-        "responses": [
-          "A red warning is like a stop sign. The system will not allow you to register. It is very likely you do not meet the prerequisites and you may want to consider registering those first."
-        ]
-      }, 
-      {
-        "tag": "cant-get-lab",
-        "patterns": [
-          "I am REGISTERED IN A LECTURE BUT I can not GET INTO A LAB. WHAT DO I DO?",
-          "i can't get into a lab session",
-          "cant get into a lab",
-          "what to do if i cant get into a lab for a registered course?"
-        ],
-        "responses": [
-          "If you have a seat in the lecture and labs are full or blocked, keep an eye on the Student Service Centre (SSC) for a seat to become available in a lab. Sometimes students drop the course which opens a seat for you and sometimes the faculty opens another lab section. If you’re concerned about being unable to register the lab, contact the relevant department for assistance."
-        ]
-      }, 
-      {
-        "tag": "w-mean",
-        "patterns": [
-          "what does a 'w' mean?",
-          "'w' meaning?",
-          "why is it showing a 'w'?",
-          "what does it mean by 'w'"
-        ],
-        "responses": [
-          "A 'W' on your transcript indicates that you have attempted a university course and have chosen to withdraw within university guidelines. A 'W' does not get calculated into your overall GPA or sessional evaluation.\n\nA withdrawal does not detract from your academic record.\n\nIf you are concerned about your academic history and applications to other schools or graduate programs, you should contact the respective organization for information on how they might regard a 'W' on a transcript.\n\nIf you drop your course before the add/drop deadline, a 'W' will not appear on your transcript. Add/drop deadlines are listed on the SSC Course Schedule, when viewing a specific course, in a specific term. These deadlines are also listed in the online Academic Calendar."
-        ]
-      }, 
-      {
-        "tag": "course-back-2-back",
-        "patterns": [
-          "can i register in courses scheduled back-to-back?",
-          "registering in back to back courses?",
-          "am i allowed to register in back to back courses?"
-        ],
-        "responses": [
-          "All courses will finish 10 minutes before the time listed in the course schedule. The size of the campus also allows students to register in back-to-back courses."
-        ]
-      }, 
-      {
-        "tag": "drop-course-after-deadline",
-        "patterns": [
-          "I MISSED THE DEADLINE FOR DROPPING A COURSE, WHAT DO I DO?",
-          "dropping a course after the deadline",
-          "can i drop a course after the deadline",
-          "i want to drop a course but the deadline has past"
-        ],
-        "responses": [
-          "It is very difficult to drop a course after the final deadline has passed. However, if you feel you have exceptional circumstances, you should speak to an Academic & Career Advisor about completing a ‘Late Withdrawal Request’ form.\n\nBe forewarned that these requests are not granted lightly and you will need to provide compelling reasons for having missed the deadlines."
-        ]
-      }, 
-      {
-        "tag": "stt-mean",
-        "patterns": [
-          "what does 'stt' mean?",
-          "stt meaning",
-          "stt fullform?",
-          "what does it mean by 'stt'?"
-        ],
-        "responses": [
-          "A Standard Timetable (STT) is a set timetable that incorporates the courses required for a program. If an STT is required for your program, you must register for the STT before adding individual courses. Not all programs offer STTs.\n\nPrograms that offer STTs include Applied Science (year one only), Fine Arts (year one only) Management (year three only). If students in any of these programs would like to make changes to their schedule they will have to contact their program advisor."
-        ]
-      }, 
-      {
-        "tag": "advising-block",
-        "patterns": [
-          "what do i do if i have an 'advising block' on my registration?",
-          "why is it showing advising block?",
-          "advising block?",
-          "why do i have an advising block?"
-        ],
-        "responses": [
-          "Reasons for this can vary. Book an appointment with an Academic & Career Advisor to have your file reviewed as soon as possible."
-        ]
-      }, 
-      {
-        "tag": "unofficial-transcript",
-        "patterns": [
-          "WHERE DO I FIND AN UNOFFICIAL TRANSCRIPT?",
-          "where can i get an unofficial transcript?",
-          "unofficial transcript",
-          "i want an unofficial transcript"
-        ],
-        "responses": [
-          "Log onto the Student Service Centre (SSC), hover over ‘Grades and Records’ then select ‘Your Grades Summary’. This is your unofficial transcript, which you can print and utilize as needed."
-        ]
-      }, 
-      {
-        "tag": "ubc-online-courses",
-        "patterns": [
-          "HOW DO I FIND UBC ONLINE COURSES?",
-          "where can i find online ubc courses?",
-          "ubc online courses?",
-          "how can i take a ubc online course?"
-        ],
-        "responses": [
-          "Learn more about distance learning courses:https://distancelearning.ubc.ca"
-        ]
-      }, 
-      {
-        "tag": "options-beyond-on-campus",
-        "patterns": [
-          "WHAT ARE MY STUDY OPTIONS BEYOND ON-CAMPUS UBCO COURSES?",
-          "options others than on-campus ubco courses?",
-          "what can i do other than on-campus ubco courses?",
-          "study options other than campus courses"
-        ],
-        "responses": [
-          "Check out summer and off-campus study options:https://students.ok.ubc.ca/academic-success/degree-planning/study-options/"
-        ]
-      }, 
-      {
-        "tag": "declare-major",
-        "patterns": [
-          "HOW DO I DECLARE OR CHANGE MY MAJOR OR SPECIALIZATION?",
-          "how to declare my major or specialization",
-          "i want to change my major or specialization",
-          "declare major or specialization?"
-        ],
-        "responses": [
-          "Check out declaring majors:https://students.ok.ubc.ca/academic-success/degree-planning/declaring-majors/"
-        ]
-      }, 
-      {
-        "tag": "failed-course",
-        "patterns": [
-          "I FAILED A COURSE, WHAT CAN I DO? CAN I RETAKE A COURSE THAT I FAILED?",
-          "can i retake a course that i failed",
-          "failed course",
-          "what should i do if i failed a course?"
-        ],
-        "responses": [
-          "It’s never easy to fail a course. You’re welcome to discuss it with an Academic & Career Advisor.\n\nIf you failed a course once, you can retake it by registering the course again. If you’re unable to register the course, contact the relevant department for assistance.\n\nIf you failed a course twice, you will need your Dean’s permission to take the course a third time. Learn more."
-        ]
-      }, 
-      {
-        "tag": "not-happy-grade",
-        "patterns": [
-          "I AM NOT HAPPY WITH MY GRADE (AND I DID NOT FAIL). SHOULD I RETAKE A COURSE? WHAT DOES IT MEAN FOR MY TRANSCRIPT?",
-          "can i retake a course that I passed?",
-          "Can i retake a course if I'm not happy with the grade",
-          "retake course that i did bad in?"
-        ],
-        "responses": [
-          "Sometimes, it’s necessary to retake a course if the course is required and a specific grade is required in that course. Sometimes, there is no reason to repeat a course that you passed. If you’re unsure of your situation, speak with an Academic & Career Advisor.\n\nAll attempts at a course are listed on your official transcript (unless you withdrew before the drop deadline).\n\nHow repeated courses are calculated depends on the intention of the calculation and which institution is completing the calculation. This can vary greatly. If you’re unsure of your situation, speak with an Academic & Career Advisor."
-        ]
-      }, 
-      {
-        "tag": "dont-meet-prereq",
-        "patterns": [
-          "I DO NOT MEET THE PREREQUISITES FOR A COURSE I WISH TO TAKE. WHAT DO I DO?",
-          "can i take a course when i do not meet the prerequisites?",
-          "i don't meet the prerequisites for a course",
-          "how to take a course without the prerequisites"
-        ],
-        "responses": [
-          "Ideally, you acquire the prerequisite for the course.\n\nPrerequisites have been put in place by your faculty to ensure you have what you need to be successful in the course. If you feel strongly that you can be successful without the prerequisite, there is a ‘prerequisite waiver’ (available on your faculty website). Be sure to clearly articulate why you will be successful despite not having the prerequisites."
-        ]
-      }, 
-      {
-        "tag": "how-many-courses",
-        "patterns": [
-          "HOW MANY COURSES SHOULD I TAKE?",
-          "HOW MANY COURSES DO I HAVE TO TAKE?",
-          "how do i know how many courses i should register for",
-          "number of courses to take?"
-        ],
-        "responses": [
-          "Use the online Academic Calendar to see how your faculty wishes you to proceed (courses per term and year). However, we understand that many students have reasons for taking fewer credits (job, family obligations, disability, etc.).\n\nSometimes, students are required to maintain a full-time course load (minimum nine credits per term in a Winter Session). For example, students residing in UBC Student Housing, students using student loans, and international students are required to maintain full-time status.\n\nWe generally do not advise students take more than the recommended credits your faculty advises. Keep in mind there are many aspects to university life and you may want to have time to explore the many opportunities that university affords you."
-        ]
-      }, 
-      {
-        "tag": "course-meet-deg-req",
-        "patterns": [
-          "I am WONDERING HOW A COURSE i am CONSIDERING WOULD MEET MY DEGREE REQUIREMENTS. HOW DO I KNOW?",
-          "i want to know how a meets my degree requirements",
-          "how does a course fit with my degree",
-          "how to know if a course meets my requirements"
-        ],
-        "responses": [
-          "Use the online Academic Calendar to guide you."
-        ]
-      }, 
-      {
-        "tag": "course-major",
-        "patterns": [
-          "do i have to take  if im majoring in  ?",
-          "is it a requirement for me to take  if im majoring in?",
-          "i am majoring in  , do i have to take  ?",
-          "can i take  as  major?"
-        ],
-        "responses": [
-          "temp result"
-        ]
-      }]
+    {
+      "tag": "compliment",
+      "patterns": [
+        "You're amazing!",
+        "You're the best chatbot ever",
+        "You're so smart",
+        "You're awesome"
+      ],
+      "responses": [
+        "Thank you so much! You're pretty great yourself.",
+        "You're too kind. I'm just doing my best to be helpful.",
+        "Wow, thank you! It's always nice to hear a compliment."
+      ]
+    }, 
+    {
+      "tag": "registration-time",
+      "patterns": [
+        "where can i find my registration date and time?",
+        "Registration date and time?",
+        "how do i know when my registration time is?",
+        "when is my registration date and time?"
+      ],
+      "responses": [
+        "Personalized registration dates are available to view on the Student Service Centre (SSC), typically around a month prior to your registration opening. Sign in to the SSC, hover over the Registration tab, then select ‘Registration’ to determine your registration date. For a rough idea of when you will be registering for courses you can check registration dates."
+      ]
+    }, 
+    {
+      "tag": "blocked-course",
+      "patterns": [
+        "what is a 'blocked' course?",
+        "why is it showing blocked course?",
+        "blocked course?",
+        "what does it mean by blocked course?"
+      ],
+      "responses": [
+        "The faculty has chosen to block the course from registration once it is filled and will now manage the wait-list accordingly. If the course is blocked with a wait-list, sign up for the wait-list. If the course is blocked with no wait-list available, read the Section Comments to find out more specific information. If no information is available under the Section Comments, you are welcome to contact the specific unit offering the course to find out more registration details."
+      ]
+    }, 
+    {
+      "tag": "restricted-course",
+      "patterns": [
+        "what is a 'restricted' course?",
+        "why is it showing restricted course?",
+        "restricted course?",
+        "what does it mean by restricted course?"
+      ],
+      "responses": [
+        "Some faculties choose to restrict who can register in their course(s). A course can be restricted by year level (year >= 3), degree program (BMGT-O), specialization/major (MAJ PSYO), or a combination of these options (year >=2, MAJ PSYO). How the course is restricted will be listed below the seat summary in the course schedule. If you meet the restrictions you will be able to register in the course."
+      ]
+    }, 
+    {
+      "tag": "two-course-overlap",
+      "patterns": [
+        "CAN I REGISTER IN TWO COURSES THAT OVERLAP IN MY SCHEDULE?",
+        "two courses are overlapping in my schedule",
+        "two courses overlapping",
+        "what to do if two courses are overlapping"
+      ],
+      "responses": [
+        "Registering in courses with an overlapping schedule is not recommended as courses may also overlap in how exams and assignments are scheduled. \n\nIn some circumstances, conflicts may be possible. Decisions on course conflicts are handled at the Faculty level. To discuss your options, contact the Faculty Dean’s office of the course that will be impacted. \n\nQuick reference: \n\nFaculty of Arts and Social Sciences:  fass.students@ubco@ubc.ca \n\nFaculty of Science: fos.students.ubco@ubc.ca"
+      ]
+    }, 
+    {
+      "tag": "drop-course",
+      "patterns": [
+        "how do i drop a course?",
+        "how can i drop a course?",
+        "drop course?",
+        "i want to drop a course"
+      ],
+      "responses": [
+        "Be aware of drop/withdrawal deadlines. The first drop deadline allows you to drop without financial penalty or any notation on your transcript. After that, you’ll have to pay for part of the course, and you’ll see a ‘W’ on your transcript. A ‘W’ on your transcript indicates that you have attempted a university course and have chosen to withdraw within university guidelines. A ‘W’ does not get calculated into your overall GPA or sessional evaluation.\n\nYou can use the registration section of the Student Service Centre (SSC) account to add or withdraw from courses. Be sure you are dropping the course from your registered courses and not from your worklist.  Dropping courses from your worklist is not considered withdrawal from your course \n\nNote: If you are required to maintain a minimum course load due to housing, funding, or other circumstances, make sure you are aware of how many credits you must be registered in before you think about withdrawing from a course."
+      ]
+    }, 
+    {
+      "tag": "section-comment",
+      "patterns": [
+        "what is a 'section-comment' in the ssc course schedule?",
+        "what is a section comment?",
+        "section comment?",
+        "what does it mean by section comment?"
+      ],
+      "responses": [
+        "Section comments will include important information about the course that the faculty would like you to be aware of. Faculties may use Section Comments to provide information on registration requirements such as, who to contact about registration issues, as well as information on the course content. Be sure to read the Section Comment if one is provided. Section Comments are listed within the course schedule on the right-hand side of the screen."
+      ]
+    }, 
+    {
+      "tag": "course-take",
+      "patterns": [
+        "how do i know what courses to take?",
+        "what courses do i need to take?",
+        "what courses to take?",
+        "courses to take?"
+      ],
+      "responses": [
+        "For first-year students, use our first-year planning guides to plan your schedule.\n\nFor second, third, and fourth-year students, use this section of your online Academic Calendar to review degree requirements.\n\nYou may also want to check out ‘Degree Navigator’ on your Student Service Centre (SSC). If you’re not familiar with it, check degree navigator under degree planning."
+      ]
+    }, 
+    {
+      "tag": "class-blocked",
+      "patterns": [
+        "MY CLASS IS blocked, WHAT DO I DO?",
+        "what to do when a class is blocked?",
+        "class is blocked?",
+        "the class i want to take is blocked?"
+      ],
+      "responses": [
+        "Read the ‘Section Comments’ for instructions."
+      ]
+    }, 
+    {
+      "tag": "yellow-warning",
+      "patterns": [
+        "I am GETTING A YELLOW WARNING - WHAT DOES THAT MEAN?",
+        "why is it showing a yellow warning?",
+        "yellow warning?",
+        "what does it mean by yellow warning?"
+      ],
+      "responses": [
+        "A yellow warning is like a yield sign. Are you sure you meet the prerequisites for the course? If you are, then proceed with registration. If the department offering the course later determines that you do not meet the prerequisites, you may be de-registered from the course (prior to the add/drop deadline)."
+      ]
+    }, 
+    {
+      "tag": "red-warning",
+      "patterns": [
+        "I am GETTING A RED WARNING - WHAT DOES THAT MEAN?",
+        "why is it showing a red warning?",
+        "red warning?",
+        "what does it mean by red warning?"
+      ],
+      "responses": [
+        "A red warning is like a stop sign. The system will not allow you to register. It is very likely you do not meet the prerequisites and you may want to consider registering those first."
+      ]
+    }, 
+    {
+      "tag": "cant-get-lab",
+      "patterns": [
+        "I am REGISTERED IN A LECTURE BUT I can not GET INTO A LAB. WHAT DO I DO?",
+        "i can't get into a lab session",
+        "cant get into a lab",
+        "what to do if i cant get into a lab for a registered course?"
+      ],
+      "responses": [
+        "If you have a seat in the lecture and labs are full or blocked, keep an eye on the Student Service Centre (SSC) for a seat to become available in a lab. Sometimes students drop the course which opens a seat for you and sometimes the faculty opens another lab section. If you’re concerned about being unable to register the lab, contact the relevant department for assistance."
+      ]
+    }, 
+    {
+      "tag": "w-mean",
+      "patterns": [
+        "what does a 'w' mean?",
+        "'w' meaning?",
+        "why is it showing a 'w'?",
+        "what does it mean by 'w'"
+      ],
+      "responses": [
+        "A 'W' on your transcript indicates that you have attempted a university course and have chosen to withdraw within university guidelines. A 'W' does not get calculated into your overall GPA or sessional evaluation.\n\nA withdrawal does not detract from your academic record.\n\nIf you are concerned about your academic history and applications to other schools or graduate programs, you should contact the respective organization for information on how they might regard a 'W' on a transcript.\n\nIf you drop your course before the add/drop deadline, a 'W' will not appear on your transcript. Add/drop deadlines are listed on the SSC Course Schedule, when viewing a specific course, in a specific term. These deadlines are also listed in the online Academic Calendar."
+      ]
+    }, 
+    {
+      "tag": "course-back-2-back",
+      "patterns": [
+        "can i register in courses scheduled back-to-back?",
+        "registering in back to back courses?",
+        "am i allowed to register in back to back courses?"
+      ],
+      "responses": [
+        "All courses will finish 10 minutes before the time listed in the course schedule. The size of the campus also allows students to register in back-to-back courses."
+      ]
+    }, 
+    {
+      "tag": "drop-course-after-deadline",
+      "patterns": [
+        "I MISSED THE DEADLINE FOR DROPPING A COURSE, WHAT DO I DO?",
+        "dropping a course after the deadline",
+        "can i drop a course after the deadline",
+        "i want to drop a course but the deadline has past"
+      ],
+      "responses": [
+        "It is very difficult to drop a course after the final deadline has passed. However, if you feel you have exceptional circumstances, you should speak to an Academic & Career Advisor about completing a ‘Late Withdrawal Request’ form.\n\nBe forewarned that these requests are not granted lightly and you will need to provide compelling reasons for having missed the deadlines."
+      ]
+    }, 
+    {
+      "tag": "stt-mean",
+      "patterns": [
+        "what does 'stt' mean?",
+        "stt meaning",
+        "stt fullform?",
+        "what does it mean by 'stt'?"
+      ],
+      "responses": [
+        "A Standard Timetable (STT) is a set timetable that incorporates the courses required for a program. If an STT is required for your program, you must register for the STT before adding individual courses. Not all programs offer STTs.\n\nPrograms that offer STTs include Applied Science (year one only), Fine Arts (year one only) Management (year three only). If students in any of these programs would like to make changes to their schedule they will have to contact their program advisor."
+      ]
+    }, 
+    {
+      "tag": "advising-block",
+      "patterns": [
+        "what do i do if i have an 'advising block' on my registration?",
+        "why is it showing advising block?",
+        "advising block?",
+        "why do i have an advising block?"
+      ],
+      "responses": [
+        "Reasons for this can vary. Book an appointment with an Academic & Career Advisor to have your file reviewed as soon as possible."
+      ]
+    }, 
+    {
+      "tag": "unofficial-transcript",
+      "patterns": [
+        "WHERE DO I FIND AN UNOFFICIAL TRANSCRIPT?",
+        "where can i get an unofficial transcript?",
+        "unofficial transcript",
+        "i want an unofficial transcript"
+      ],
+      "responses": [
+        "Log onto the Student Service Centre (SSC), hover over ‘Grades and Records’ then select ‘Your Grades Summary’. This is your unofficial transcript, which you can print and utilize as needed."
+      ]
+    }, 
+    {
+      "tag": "ubc-online-courses",
+      "patterns": [
+        "HOW DO I FIND UBC ONLINE COURSES?",
+        "where can i find online ubc courses?",
+        "ubc online courses?",
+        "how can i take a ubc online course?"
+      ],
+      "responses": [
+        "Learn more about distance learning courses:https://distancelearning.ubc.ca"
+      ]
+    }, 
+    {
+      "tag": "options-beyond-on-campus",
+      "patterns": [
+        "WHAT ARE MY STUDY OPTIONS BEYOND ON-CAMPUS UBCO COURSES?",
+        "options others than on-campus ubco courses?",
+        "what can i do other than on-campus ubco courses?",
+        "study options other than campus courses"
+      ],
+      "responses": [
+        "Check out summer and off-campus study options:https://students.ok.ubc.ca/academic-success/degree-planning/study-options/"
+      ]
+    }, 
+    {
+      "tag": "declare-major",
+      "patterns": [
+        "HOW DO I DECLARE OR CHANGE MY MAJOR OR SPECIALIZATION?",
+        "how to declare my major or specialization",
+        "i want to change my major or specialization",
+        "declare major or specialization?"
+      ],
+      "responses": [
+        "Check out declaring majors:https://students.ok.ubc.ca/academic-success/degree-planning/declaring-majors/"
+      ]
+    }, 
+    {
+      "tag": "failed-course",
+      "patterns": [
+        "I FAILED A COURSE, WHAT CAN I DO? CAN I RETAKE A COURSE THAT I FAILED?",
+        "can i retake a course that i failed",
+        "failed course",
+        "what should i do if i failed a course?"
+      ],
+      "responses": [
+        "It’s never easy to fail a course. You’re welcome to discuss it with an Academic & Career Advisor.\n\nIf you failed a course once, you can retake it by registering the course again. If you’re unable to register the course, contact the relevant department for assistance.\n\nIf you failed a course twice, you will need your Dean’s permission to take the course a third time. Learn more."
+      ]
+    }, 
+    {
+      "tag": "not-happy-grade",
+      "patterns": [
+        "I AM NOT HAPPY WITH MY GRADE (AND I DID NOT FAIL). SHOULD I RETAKE A COURSE? WHAT DOES IT MEAN FOR MY TRANSCRIPT?",
+        "can i retake a course that I passed?",
+        "Can i retake a course if I'm not happy with the grade",
+        "retake course that i did bad in?",
+        "retake a course"
+      ],
+      "responses": [
+        "Sometimes, it’s necessary to retake a course if the course is required and a specific grade is required in that course. Sometimes, there is no reason to repeat a course that you passed. If you’re unsure of your situation, speak with an Academic & Career Advisor.\n\nAll attempts at a course are listed on your official transcript (unless you withdrew before the drop deadline).\n\nHow repeated courses are calculated depends on the intention of the calculation and which institution is completing the calculation. This can vary greatly. If you’re unsure of your situation, speak with an Academic & Career Advisor."
+      ]
+    }, 
+    {
+      "tag": "dont-meet-prereq",
+      "patterns": [
+        "I DO NOT MEET THE PREREQUISITES FOR A COURSE I WISH TO TAKE. WHAT DO I DO?",
+        "can i take a course when i do not meet the prerequisites?",
+        "i don't meet the prerequisites for a course",
+        "how to take a course without the prerequisites"
+      ],
+      "responses": [
+        "Ideally, you acquire the prerequisite for the course.\n\nPrerequisites have been put in place by your faculty to ensure you have what you need to be successful in the course. If you feel strongly that you can be successful without the prerequisite, there is a ‘prerequisite waiver’ (available on your faculty website). Be sure to clearly articulate why you will be successful despite not having the prerequisites."
+      ]
+    }, 
+    {
+      "tag": "how-many-courses",
+      "patterns": [
+        "HOW MANY COURSES SHOULD I TAKE?",
+        "HOW MANY COURSES DO I HAVE TO TAKE?",
+        "how do i know how many courses i should register for",
+        "number of courses to take?"
+      ],
+      "responses": [
+        "Use the online Academic Calendar to see how your faculty wishes you to proceed (courses per term and year). However, we understand that many students have reasons for taking fewer credits (job, family obligations, disability, etc.).\n\nSometimes, students are required to maintain a full-time course load (minimum nine credits per term in a Winter Session). For example, students residing in UBC Student Housing, students using student loans, and international students are required to maintain full-time status.\n\nWe generally do not advise students take more than the recommended credits your faculty advises. Keep in mind there are many aspects to university life and you may want to have time to explore the many opportunities that university affords you."
+      ]
+    }, 
+    {
+      "tag": "course-meet-deg-req",
+      "patterns": [
+        "I am WONDERING HOW A COURSE i am CONSIDERING WOULD MEET MY DEGREE REQUIREMENTS. HOW DO I KNOW?",
+        "i want to know how a course meets my degree requirements",
+        "how does a course fit with my degree",
+        "how to know if a course meets my requirements"
+      ],
+      "responses": [
+        "Use the online Academic Calendar to guide you, or speak to an Academic & Career Advisor for additional assistance."
+      ]
+    }, 
+    {
+      "tag": "course-major",
+      "patterns": [
+        "do i have to take  if im majoring in  ?",
+        "is it a requirement for me to take  if im majoring in?",
+        "i am majoring in  , do i have to take  ?",
+        "can i take  as  major?"
+      ],
+      "responses": [
+        "temp result"
+      ]
+    }]
 }

@@ -89,6 +89,7 @@ def ner_response(message):
     
     for ent in doc.ents:
         user.update({ent.label_: ent.text})
+        
     direct = {"computer science": ["cosc 121", "cosc 240", "cosc 341"]}
     
     reply = ""
@@ -134,6 +135,7 @@ def update_csv():
             baz = 0
             print("\nResults.csv updated! \n\nWelcome to chatbot!")
 
+# for data cleaning purpose
 # for i, word in enumerate(words):
 #     print (str(i) + " " + word)
 

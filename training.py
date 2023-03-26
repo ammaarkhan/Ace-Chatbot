@@ -84,16 +84,12 @@ train_y = list(training[:, 1]) # ex: [1, 0, 0]
 
 # model building
 
-# model.add(Dense(256, input_shape=(len(train_x[0]), ), activation='relu')) #
-# model.add(Dropout(0.5)) #
-# model.add(Dense(128, activation='relu')) #
-
-# model = Sequential()
-# model.add(Dense(128, input_shape=(len(train_x[0]), ), activation='relu'))
-# model.add(Dropout(0.5))
-# model.add(Dense(64, activation='relu'))
-# model.add(Dropout(0.5))
-# model.add(Dense(len(train_y[0]), activation='softmax'))
+# # model = Sequential()
+# # model.add(Dense(128, input_shape=(len(train_x[0]), ), activation='softmax'))
+# # model.add(Dropout(0.5))
+# # model.add(Dense(64, activation='softmax'))
+# # model.add(Dropout(0.5))
+# # model.add(Dense(len(train_y[0]), activation='softmax'))
 
 # # compiling model
 # sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
