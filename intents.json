@@ -4,8 +4,8 @@
         "tag": "greeting",
         "patterns": [
         "Good Evening",
-        "Hello there",
-        "Hi there",
+        "Hello",
+        "Hi",
         "Good Morning",
         "Good Afternoon"
         ],

@@ -1,8 +1,8 @@
 Pattern,AccIntent,CalcIntent,RawCalc
 ,model name:,models/chatbotmodelv4.h5
 Good Evening,greeting,greeting,"[{'intent': 'greeting', 'probability': '0.8065472'}]"
-Hello there,greeting,greeting,"[{'intent': 'greeting', 'probability': '0.7958458'}]"
-Hi there,greeting,greeting,"[{'intent': 'greeting', 'probability': '0.77397037'}]"
+Hello,greeting,greeting,"[{'intent': 'greeting', 'probability': '0.34902993'}]"
+Hi,greeting,greeting,"[{'intent': 'greeting', 'probability': '0.31629205'}]"
 Good Morning,greeting,greeting,"[{'intent': 'greeting', 'probability': '0.8052528'}]"
 Good Afternoon,greeting,greeting,"[{'intent': 'greeting', 'probability': '0.79356456'}]"
 Thank you,thanks,thanks,"[{'intent': 'thanks', 'probability': '0.6385355'}]"

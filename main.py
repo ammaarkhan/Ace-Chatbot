@@ -10,6 +10,14 @@ from tensorflow import keras
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 
+from pathlib import Path
+import spacy
+
+# loading ner model
+output_dir=Path("NerModels")
+print("Loading from", output_dir)
+nlp2 = spacy.load(output_dir)
+
 model_list = ['models/chatbotmodelv4.h5'] # 'chatbotmodelv1.h5', 'chatbotmodelv2.h5', 'chatbotmodelv3.h5'
 
 # creating a WordNetLemmatizer() class to get the root words
@@ -64,6 +72,8 @@ def get_response(results_list, intents_json):
                 "Not sure I understand, Please rephrase the question"]) 
         return result
     tag = results_list[0]['intent'] # gets the 'intent' value from the dictionary
+    if (tag == 'course-major'):
+        return ner_response(message)
     list_of_intents = intents_json['intents'] # retrieving json file
     for i in list_of_intents: 
         if i['tag'] == tag: # retrieving responses for that tag
@@ -71,43 +81,65 @@ def get_response(results_list, intents_json):
             break
     return result
 
+def ner_response(message):
+    doc = nlp2(message)
+    print('Entities', [(ent.text, ent.label_) for ent in doc.ents])
+    
+    user = {}
+    
+    for ent in doc.ents:
+        user.update({ent.label_: ent.text})
+    direct = {"computer science": ["cosc 121", "cosc 240", "cosc 341"]}
+    
+    reply = ""
+    if user['COR'] in direct[user['MAJOR']]:
+        reply = "Yes " + user['COR'] + " is a requirement for " + user['MAJOR'] 
+    else:
+        reply = user['COR'] + " is not a requirement for " + user['MAJOR'] + " but might be used as an elective, speak with an Academic & Career Advisor for more clarity."
+    
+    # temp = user['COR'] + " " + user['MAJOR']
+    return reply
+
 print("Chatbot running\n")
 
 print("Loading model")
 model = load_model(model_list[0])
 
-bar = 0
-baz = 0
-list_of_intents = intents['intents'] # retrieving json file
-with open('results.csv', 'w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerow(["Pattern", "AccIntent", "CalcIntent", "RawCalc"])
-    for modelName in model_list:
-        writer.writerow(["", "model name:", modelName])
-        for i in list_of_intents:
-            for x in i['patterns']:
-                bar += 1
-                res = predict_class(x.lower()) 
-                if not res:
-                    writer.writerow([x, i['tag'], "null", "no prediction"])
-                    break
-                # print(x)
-                # print(i['tag'])
-                # print(res[0]['intent'])
-                # print(res)
-                writer.writerow([x, i['tag'], res[0]['intent'], res])
-                if i['tag'] == res[0]['intent']:
-                    baz += 1
-        writer.writerow([ "", "Accuracy", (baz/bar)*100])
-        print("\nAccuracy of model: " +str(((baz/bar)*100)))
-        bar = 0
-        baz = 0
+def update_csv():
+    bar = 0
+    baz = 0
+    list_of_intents = intents['intents'] # retrieving json file
+    with open('results.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Pattern", "AccIntent", "CalcIntent", "RawCalc"])
+        for modelName in model_list:
+            writer.writerow(["", "model name:", modelName])
+            for i in list_of_intents:
+                for x in i['patterns']:
+                    bar += 1
+                    res = predict_class(x.lower()) 
+                    if not res:
+                        writer.writerow([x, i['tag'], "null", "no prediction"])
+                        break
+                    # print(x)
+                    # print(i['tag'])
+                    # print(res[0]['intent'])
+                    # print(res)
+                    writer.writerow([x, i['tag'], res[0]['intent'], res])
+                    if i['tag'] == res[0]['intent']:
+                        baz += 1
+            writer.writerow([ "", "Accuracy", (baz/bar)*100])
+            print("\nAccuracy of model: " +str(((baz/bar)*100)))
+            bar = 0
+            baz = 0
+            print("\nResults.csv updated! \n\nWelcome to chatbot!")
 
-print("\nResults.csv updated! \n\nWelcome to chatbot!")
+# for i, word in enumerate(words):
+#     print (str(i) + " " + word)
 
-for i, word in enumerate(words):
-    print (str(i) + " " + word)
-    
+# to update csv results
+# update_csv()
+
 while True:
     message = input("\nUser: ")
     if message == "end":
