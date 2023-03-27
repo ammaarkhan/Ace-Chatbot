@@ -90,11 +90,15 @@ def ner_response(message):
     for ent in doc.ents:
         user.update({ent.label_: ent.text})
         
-    direct = {"computer science": ["cosc 121", "cosc 240", "cosc 341"]}
-    
+    direct = {"computer science": ["cosc 121", "math 100", "math 101", "cosc 211", "cosc 221", "cosc 222", "math 221", "stat 230", "cosc 320", "cosc 304", "cosc 310" "cosc 341" "cosc 499", "phil 331"]}
+    optional = {"computer science": [["cosc 111", "cosc 123"], {"engl 109": ["2", "112", "113", "114", "150", "151", "153", "154"," 155", "156", "203", "corh 203", "corh 205", "apsc 176", "apsc 201"]}, ["phys 111", "phys 112"]]}
     reply = ""
     if user['COR'] in direct[user['MAJOR']]:
-        reply = "Yes " + user['COR'] + " is a requirement for " + user['MAJOR'] 
+        reply = "Yes " + user['COR'] + " is a requirement for " + user['MAJOR'] + "." 
+    # for i in optional:
+        
+    if user['COR'] in optional[user["MAJOR"]]:
+        reply = "Yes " + user['COR'] 
     else:
         reply = user['COR'] + " is not a requirement for " + user['MAJOR'] + " but might be used as an elective, speak with an Academic & Career Advisor for more clarity."
     

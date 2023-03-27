@@ -6,19 +6,36 @@ output_dir=Path("NerModels")
 # print("Loading from", output_dir)
 nlp2 = spacy.load(output_dir)
 
-doc = nlp2("cosc 121 is computer science")
+doc = nlp2("cosc 222  is computer science")
 # print('Entities', [(ent.text, ent.label_) for ent in doc.ents])
-dict = {}
+user = {}
 for ent in doc.ents:
-    dict.update({ent.label_: ent.text})
+    user.update({ent.label_: ent.text})
 
-direct = {"computer science": ["cosc 121", "cosc 240", "cosc 341"]}
+direct = {"computer science": ["cosc 121", "math 100", "math 101", "cosc 211", "cosc 221", "cosc 222", "math 221", "stat 230", "cosc 320", "cosc 304", "cosc 310" "cosc 341" "cosc 499", "phil 331"]}
+optional = {"computer science": [["cosc 111", "cosc 123"], {"engl 109": ["2", "engl 112", "engl 113", "engl 114", "engl 150", "engl 151", "engl 153", "engl 154","engl 155", "engl 156", "engl 203", "corh 203", "corh 205", "apsc 176", "apsc 201"]}, ["phys 111", "phys 112"]]}
+reply = ""
 
-# if dict['COR'] in ["cosc 121", "cosc 240", "cosc 341"]:
-
-if dict['COR'] in direct[dict['MAJOR']]:
-    print("lets gooo")
-else: 
-    print("not there loser")
-
-# print(dict['COR'], dict['MAJOR'])
+if user['COR'] in direct[user['MAJOR']]:
+    reply = "Yes " + user['COR'] + " is a requirement for " + user['MAJOR'] + "." 
+else:
+    for type in optional[user['MAJOR']]:
+        if isinstance(type, dict):
+            l=[]
+            [l.extend([k,v]) for k,v in type.items()]
+            y = [l[0]]
+            [y.extend(l[1])]
+            if user['COR'] in y:
+                reply = "Yes, take one of "+ y[0] + " or " + y[1] + " of "  
+                del y[0]
+                del y[0]
+                for i in y:
+                    reply += i + ", "
+        else:
+            if user['COR'] in type:
+                reply = "Yes, take one of "+ type[0] + " or " + type[1]  
+        
+if reply == "":
+    reply = user['COR'] + " is not a requirement for " + user['MAJOR'] + " but might be used as an elective, speak with an Academic & Career Advisor for more clarity."
+    
+print(reply)

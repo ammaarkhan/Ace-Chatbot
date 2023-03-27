@@ -101,10 +101,10 @@ train_y = list(training[:, 1]) # ex: [1, 0, 0]
 
 
 
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout, LeakyReLU
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.regularizers import l2
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, LeakyReLU
+from keras.optimizers import Adam
+from keras.regularizers import l2
 
 # Define model
 model = Sequential()
