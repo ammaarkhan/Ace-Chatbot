@@ -6,7 +6,7 @@ output_dir=Path("NerModels")
 # print("Loading from", output_dir)
 nlp2 = spacy.load(output_dir)
 
-doc = nlp2("cosc 222  is computer science")
+doc = nlp2("cosc 111 is computer science")
 # print('Entities', [(ent.text, ent.label_) for ent in doc.ents])
 user = {}
 for ent in doc.ents:
@@ -17,7 +17,7 @@ optional = {"computer science": [["cosc 111", "cosc 123"], {"engl 109": ["2", "e
 reply = ""
 
 if user['COR'] in direct[user['MAJOR']]:
-    reply = "Yes " + user['COR'] + " is a requirement for " + user['MAJOR'] + "." 
+    reply = "Yes " + user['COR'].upper() + " is a requirement for " + user['MAJOR'].upper() + "." 
 else:
     for type in optional[user['MAJOR']]:
         if isinstance(type, dict):
@@ -26,14 +26,17 @@ else:
             y = [l[0]]
             [y.extend(l[1])]
             if user['COR'] in y:
-                reply = "Yes, take one of "+ y[0] + " or " + y[1] + " of "  
+                reply = "Yes, take one of "+ y[0].upper() + " or " + y[1] + " of "  
                 del y[0]
                 del y[0]
                 for i in y:
-                    reply += i + ", "
+                    reply += i.upper() + ", "
         else:
             if user['COR'] in type:
-                reply = "Yes, take one of "+ type[0] + " or " + type[1]  
+                reply = "Yes, take one of "+ type[0].upper() 
+                del type[0]
+                for i in type:
+                    reply += " or " + i.upper()  
         
 if reply == "":
     reply = user['COR'] + " is not a requirement for " + user['MAJOR'] + " but might be used as an elective, speak with an Academic & Career Advisor for more clarity."
