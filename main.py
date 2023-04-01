@@ -18,7 +18,8 @@ output_dir=Path("NerModels")
 print("Loading from", output_dir)
 nlp2 = spacy.load(output_dir)
 
-model_list = ['models/chatbotmodelv4.h5'] # 'chatbotmodelv1.h5', 'chatbotmodelv2.h5', 'chatbotmodelv3.h5'
+# model_list = ['models/chatbotmodelv4.h5'] # 'chatbotmodelv1.h5', 'chatbotmodelv2.h5', 'chatbotmodelv3.h5'
+modelName = 'models/chatbotmodelv4.h5'
 
 # creating a WordNetLemmatizer() class to get the root words
 lemmatizer = WordNetLemmatizer()
@@ -35,20 +36,20 @@ def clean_up_sentences(sent):
     return sentence_words
 
 def bagofw(sent):
-    test = ""
+    testModelInput = ""
     # separate words from input sentence 
-    sent = contractions.fix(sent.lower())
+    sent = contractions.fix(sent.lower()) # fix the contractions and lower input sentence
     sentence_words = clean_up_sentences(sent) # array of root words from input sentence
     bag = [0]*len(words) # create array of zeros same size of words array
     # if w in 'sentence_words' is in 'words' array, make bag[i] = 1 at same index as where w is in 'words' array
-    for w in sentence_words: 
+    for inputWord in sentence_words: 
         for i, word in enumerate(words):
-            if w == word.lower(): # this is to the lower the words in the pkl file
-                test = test + " " + w
+            if inputWord == word: # was word.lower() previously, to lower pkl words for comparison
+                testModelInput = testModelInput + " " + inputWord
                 bag[i] = 1
             # else:
             #     words.append(w)
-    print("Model input:" + test)
+    print("Model input:" + testModelInput)
     return np.array(bag)
 
 def predict_class(sent):
@@ -129,7 +130,7 @@ def ner_response(message):
 print("Chatbot running\n")
 
 print("Loading model")
-model = load_model(model_list[0])
+model = load_model(modelName)
 
 def update_csv():
     bar = 0
@@ -138,27 +139,26 @@ def update_csv():
     with open('results.csv', 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["Pattern", "AccIntent", "CalcIntent", "RawCalc"])
-        for modelName in model_list:
-            writer.writerow(["", "model name:", modelName])
-            for i in list_of_intents:
-                for x in i['patterns']:
-                    bar += 1
-                    res = predict_class(x.lower()) 
-                    if not res:
-                        writer.writerow([x, i['tag'], "null", "no prediction"])
-                        break
-                    # print(x)
-                    # print(i['tag'])
-                    # print(res[0]['intent'])
-                    # print(res)
-                    writer.writerow([x, i['tag'], res[0]['intent'], res])
-                    if i['tag'] == res[0]['intent']:
-                        baz += 1
-            writer.writerow([ "", "Accuracy", (baz/bar)*100])
-            print("\nAccuracy of model: " +str(((baz/bar)*100)))
-            bar = 0
-            baz = 0
-            print("\nResults.csv updated! \n\nWelcome to chatbot!")
+        writer.writerow(["", "model name:", modelName])
+        for i in list_of_intents:
+            for x in i['patterns']:
+                bar += 1
+                res = predict_class(x.lower()) 
+                if not res:
+                    writer.writerow([x, i['tag'], "null", "no prediction"])
+                    break
+                # print(x)
+                # print(i['tag'])
+                # print(res[0]['intent'])
+                # print(res)
+                writer.writerow([x, i['tag'], res[0]['intent'], res])
+                if i['tag'] == res[0]['intent']:
+                    baz += 1
+        writer.writerow([ "", "Accuracy", (baz/bar)*100])
+        print("\nAccuracy of model: " +str(((baz/bar)*100)))
+        bar = 0
+        baz = 0
+        print("\nResults.csv updated! \n\nWelcome to chatbot!")
 
 # for data cleaning purpose
 # for i, word in enumerate(words):
