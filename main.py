@@ -66,7 +66,7 @@ def predict_class(sent):
                             'probability': str(r[1])}) # str(0.9851791)
     return results_list
     
-def get_response(results_list, intents_json):
+def get_response(results_list, user_message):
     result = ""
     if bool(results_list) == False:
         result = random.choice(["Sorry, can't understand you. Please rephrase the question", "Please give me more info",
@@ -74,16 +74,16 @@ def get_response(results_list, intents_json):
         return result
     tag = results_list[0]['intent'] # gets the 'intent' value from the dictionary
     if (tag == 'course-major'):
-        return ner_response(message)
-    list_of_intents = intents_json['intents'] # retrieving json file
+        return ner_response(user_message)
+    list_of_intents = intents['intents'] # retrieving json file
     for i in list_of_intents: 
         if i['tag'] == tag: # retrieving responses for that tag
             result = random.choice(i['responses'])
             break
     return result
 
-def ner_response(message):
-    doc = nlp2(message)
+def ner_response(user_message):
+    doc = nlp2(user_message)
     # print('Entities', [(ent.text, ent.label_) for ent in doc.ents])
     
     user = {}
@@ -168,9 +168,9 @@ def update_csv():
 # update_csv()
 
 while True:
-    message = input("\nUser: ")
-    if message == "end":
+    user_message = input("\nUser: ")
+    if user_message == "end":
         break
-    results_list = predict_class(message) # [{'intent': 'greeting', 'probability': '0.9163127'}]
-    final_res = get_response(results_list, intents) # randomly chosen response with same tag as prediction
-    print("Ace: " + final_res)
+    results_list = predict_class(user_message) # [{'intent': 'greeting', 'probability': '0.9163127'}]
+    bot_message = get_response(results_list, user_message) # randomly chosen response with same tag as prediction
+    print("Ace: " + bot_message)
