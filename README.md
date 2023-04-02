@@ -10,4 +10,4 @@ The Ace chatbot project is currently being worked upon and improved, and represe
 
 Demo:
 
-<img src="https://user-images.githubusercontent.com/98288912/229336550-b13a46c2-8679-4d3a-b81a-02dcbdb8289d.gif" alt="ace-demo" loop=infinite>
+<img src="acedemo.gif" alt="ace-demo" loop=infinite>
