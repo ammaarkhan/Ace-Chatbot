@@ -1,6 +1,14 @@
-{"mandatory": {"computer science": ["cosc 121", "math 100", "math 101", "cosc 211", "cosc 221", "cosc 222", "math 221", "stat 230", "cosc 320", "cosc 304", "cosc 310", "cosc 341", "cosc 499", "phil 331"], 
-"chemistry": ["math 100", "chem 201", "chem 220", "chem 203", "chem 203", "chem 204", "chem 211", "math 200"]},
-"optional": {"computer science": [["cosc 111", "cosc 123"], {"engl 109": ["2", "engl 112", "engl 113", "engl 114", "engl 150", "engl 151", "engl 153", "engl 154","engl 155", "engl 156", "engl 203", "corh 203", "corh 205", "apsc 176", "apsc 201"]}, ["phys 111", "phys 112"]],
-"chemistry": [["chem 111", "chem 121"], ["chem 113", "chem 123"], ["math 101", "math 103"], {"engl 109": ["2", "engl 112", "engl 113", "engl 114", "engl 150", "engl 151", "engl 153", "engl 154","engl 155", "engl 156", "corh 203"]}, ["phys 111", "phys 112"], ["phys 121", "phys 122"]]}
+{"mandatory": {
+    "computer science": ["cosc 121", "math 100", "math 101", "cosc 211", "cosc 221", "cosc 222", "math 221", "stat 230", "cosc 320", "cosc 304", "cosc 310", "cosc 341", "cosc 499", "phil 331"], 
+    "chemistry": ["math 100", "chem 201", "chem 220", "chem 203", "chem 203", "chem 204", "chem 211", "math 200"],
+    "data science": ["data 101", "math 100", "math 101", "cosc 111", "cosc 121", "math 200", "math 221", "stat 230", "cosc 221", "cosc 222", "data 301", "data 311", "cosc 304", "stat 303", "phil 331"],
+    "economics": ["econ 101", "econ 102", "math 100", "math 101", "econ 204", "econ 205", "math 200", "math 221", "stat 230", "econ 327", "econ 328"]
+},
+"optional": {
+    "computer science": [["cosc 111", "cosc 123"], {"engl 109": ["2", "engl 112", "engl 113", "engl 114", "engl 150", "engl 151", "engl 153", "engl 154","engl 155", "engl 156", "engl 203", "corh 203", "corh 205", "apsc 176", "apsc 201"]}, ["phys 111", "phys 112"]],
+    "chemistry": [["chem 111", "chem 121"], ["chem 113", "chem 123"], ["math 101", "math 103"], {"engl 109": ["2", "engl 112", "engl 113", "engl 114", "engl 150", "engl 151", "engl 153", "engl 154","engl 155", "engl 156", "corh 203"]}, ["phys 111", "phys 112"], ["phys 121", "phys 122"]],
+    "data science": [["chem 111", "chem 121"], {"engl 109": ["2", "engl 112", "engl 113", "engl 114", "engl 150", "engl 151", "engl 153", "engl 154","engl 155", "engl 156"]}, ["phys 111", "phys 112"], ["phys 121", "phys 122"]],
+    "economics": [["chem 111", "chem 121"], ["chem 113", "chem 123"], ["phys 111", "phys 112"], ["phys 121", "phys 122"], {"engl 109": ["2", "engl 112", "engl 113", "engl 114", "engl 150", "engl 151", "engl 153", "engl 154","engl 155", "engl 156"]}, ["2", "astr 110", "astr 120", "astr 111", "astr 121", "biol 116", "biol 125", "cosc 111", "cosc 121", "cosc 122", "cosc 123", "eesc 111", "eesc 121", "geog 108", "geog 109"], ["4", "econ 320", "econ 427", "math 303", "math 307", "math 317", "math 319", "math 327", "math 339", "math 340", "math 409", "math 441", "stat 303", "stat 401", "data 301", "data 311", "data 410"]]
+}
 }
 
